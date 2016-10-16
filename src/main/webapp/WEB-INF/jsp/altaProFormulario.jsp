@@ -69,7 +69,7 @@
     		<div class="row">  	
 	    		<div class="col-sm-12">
 	    			<div class="contact-form">
-				    	<form:form action="/ropa/altaProConfirma" modelAttribute="producto" id="main-contact-form" class="contact-form row" role="form" method="POST" name="altaProd">
+				    	<form:form action="/ropa/altaProConfirma" modelAttribute="producto" id="main-contact-form" class="contact-form row"  method="POST" name="altaProd">
 				            <div class="form-group col-md-6">
 				                <form:input path="id" type="text" name="idprod" class="form-control" required="required" placeholder="Código"/>
 				            </div>		

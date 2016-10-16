@@ -68,7 +68,7 @@
     		<div class="row">  	
 	    		<div class="col-sm-12">
 	    			<div class="contact-form">
-				        <form:form action="/ropa/bajaProducto" id="main-contact-form" class="contact-form row" name="bajaProd" role="form" method="POST">		
+				        <form:form action="/ropa/bajaProducto/" id="main-contact-form" class="contact-form row" name="bajaProd" method="POST">		
 							<div id="oculto" class="col-md-12">
 								<table class="table table-bordered sortable-theme-bootstrap col-md-12" data-sortable>
 									<tr>

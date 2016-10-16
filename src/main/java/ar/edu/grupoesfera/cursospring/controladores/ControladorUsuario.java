@@ -135,7 +135,7 @@ public class ControladorUsuario {
 		String info;
 		ColeccionUsuario serviciousuario = ColeccionUsuario.getInstance();
 		ModelMap modelo = new ModelMap();
-		try{
+		/*try{
 			serviciousuario.altaUsuario(usuario);
 			info="REGISTRO EXITOSO";
 		}catch(Exception e){
@@ -146,6 +146,13 @@ public class ControladorUsuario {
 			usuario.setTelefono(null);
 			usuario.geteMail();
 			usuario.setClave(null);
+			info= e.getMessage();
+		}*/
+		try{
+			serviciousuario.altaUsuario(usuario);
+		info="REGISTRO EXITOSO";
+		}catch(Exception e){
+			serviciousuario.guardaUsuarioExistente(usuario);
 			info= e.getMessage();
 		}
 		modelo.put("info", info);

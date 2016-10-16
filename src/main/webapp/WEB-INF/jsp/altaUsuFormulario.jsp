@@ -50,9 +50,11 @@
 										<li><a href="/ropa/productosNi">Niños</a></li>  
                                     </ul>
                                 </li> 								
-								<li><a href="/ropa/registro">REGISTRO</a></li> 
+								<li><a href="/ropa/registro" class="active">REGISTRO</a></li> 
 								<li><a href="/ropa/contacto">CONTACTO</a></li>
-								<li><a href="/ropa/administrar"  class="active">ADMINISTRACION</a></li>
+								<li><a href="/ropa/abm">ABM(provisorio)</a></li>
+								<li><a href="/ropa/stock">MANEJO STOCK(provisorio)</a></li>
+								<li><a href="/ropa/verStock">VER STOCK(provisorio)</a></li>
 							</ul>
 						</div>
 					</div>
@@ -72,44 +74,49 @@
     		<div class="row">  	
 	    		<div class="col-sm-12">
 	    			<div class="formulario">
-						<form:form action="/ropa/altaUsuConfirma" modelAttribute="usuario" role="form" method="POST" name="formulario">
-							<div class="form-group col-md-12">
+						<form:form name="formulario" action="/ropa/altaUsuConfirma" modelAttribute="usuario" id="main-contact-form" method="POST" name="altaUsu">
+							<div class="form-group col-md-6">
 								<div id="alert1">Debe tener entre 10 y 20 caracteres. </div>			
-								<form:input path="nombreYapellido" type="text" id="nombre" required="required" class="form-control" placeholder="Nombre y Apellido"/>
+								<form:input path="nombre" type="text" id="nombre" required="required" class="form-control" placeholder="Nombre"/>
 							</div>
 							<div class="form-group col-md-6">
-								<div id="alert2">Debe tener 9 caracteres. </div>
-								<form:input path="dni" type="text" id="dni" required="required" class="form-control" placeholder="DNI"/>							
+								<div id="alert1">Debe tener entre 10 y 20 caracteres. </div>			
+								<form:input path="apellido" type="text" id="apellido" required="required" class="form-control" placeholder="Apellido"/>
 							</div>
-							<div class="form-group col-md-6">
-								<form:input path="fechaNacimiento" name="datepicker" required="required" placeholder="Fecha de nacimiento dd/mm/aa"  type="text" class="form-control"/>
-							</div>
-							<div class="form-group col-md-6">
-								<div id="alert6">Ingrese una dirección válida.</div>			
-								<form:input path="domicilio" type="text" id="domicilio" required="required" class="form-control" placeholder="Domicilio"/>
-							</div>
-							<div class="form-group col-md-6">
-								<div id="alert7">El número ingresado no es válido. </div>
-								<form:input path="telefono" type="text" id="numero" required="required" class="form-control" placeholder="Teléfono"/>
-							</div>
-							
-							<div class="form-group col-md-12">
-							<div id="alert3">El e-mail ingresado no es correcto. </div>
-								<form:input path="eMail" type="email" id="email" required="required" class="form-control" placeholder="E-mail"/>
-							</div>
-							<div class="form-group col-md-6">
-								<div id="alert4">La contraseña debe tener entre 5 y 10 caracteres y poseer números y letras.</div>
-								<form:input path="clave" type="password" id="contraseña" required="required" class="form-control" placeholder="Contraseña"/>			
-							</div>
-							<div class="form-group col-md-6">			
-								<form:input path="tipo" type="text" id="tipo" required="required" class="form-control" placeholder="Tipo"/>
-							</div>							
-							<div class="form-group col-md-12">
 								<div class="form-group col-md-6">
-									<input type="reset" class="btn btn-primary pull-left"/>						
+									<div id="alert2">Debe tener 9 caracteres. </div>
+									<form:input path="dni" type="text" id="dni" required="required" class="form-control" placeholder="DNI"/>							
 								</div>
 								<div class="form-group col-md-6">
-									<input type="submit" id= "boton" name="submit" class="btn btn-primary pull-right" value="Ingrear"/>
+									<form:input  path="date" name="datepicker" required="required" value="Fecha de nacimiento" id="datepicker" type="datepicker" class="form-control"/>
+								</div>
+								<div class="form-group col-md-6">
+									<div id="alert6">Ingrese una dirección válida.</div>			
+									<form:input path="domicilio" type="text" id="domicilio" required="required" class="form-control" placeholder="Domicilio"/>
+								</div>
+								<div class="form-group col-md-6">
+									<div id="alert7">El número ingresado no es válido. </div>
+									<form:input path="telefono" type="text" id="numero" required="required" class="form-control" placeholder="Teléfono"/>
+								</div>
+								
+								<div class="form-group col-md-12">
+								<div id="alert3">El e-mail ingresado no es correcto. </div>
+								<form:input path="mail" type="email" id="email" required="required" class="form-control" placeholder="E-mail"/>
+							</div>
+								<div class="form-group col-md-6">
+									<div id="alert4">La contraseña debe tener entre 5 y 10 caracteres y poseer números y letras.</div>
+									<form:input path="contrasenia" type="password" id="contraseña" required="required" class="form-control" placeholder="Contraseña"/>			
+								</div>
+								<div class="form-group col-md-6">
+									<div id="alert5">Las contraseñas no coinciden. </div>
+									<input type="password" id="contraseña2" required="required" class="form-control" placeholder="Repetir Contraseña"/>
+								</div>
+							<div class="form-group col-md-12">
+								<div class="form-group col-md-6">
+									<input type="reset" href="" class="btn btn-primary pull-left"/>						
+								</div>
+								<div class="form-group col-md-6">
+									<input type="submit" id= "boton" name="submit" class="btn btn-primary pull-right" value="Registrar"/>
 								</div>
 							</div>							
 						</form:form>

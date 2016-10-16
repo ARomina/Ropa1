@@ -73,17 +73,22 @@
     		<div class="row">  
 				<div class="col-xs-12 col-sm-12 col-md-12 padding-right"> 
 					<div class="col-xs-4 col-sm-4">
-						<form  id="main-contact-form" class="contact-form row" name="usuarios">													
-							<div class="form-group col-md-12 col-sm-12">
-								<a href="/ropa/altaUsuFormulario"><input type="button" name="altaU" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Alta"/></a>
-							</div>
-							<div class="form-group col-md-12 col-sm-12">
-								<a href="/ropa/bajaOmodifUsu"><input type="button" name="bajaU" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Baja / Modificación"/></a>
-							</div>	
-							<div class="form-group col-md-12 col-sm-12">
-								<a href="/ropa/verUsuarios"><input type="button" name="listaU" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Listado"/></a>
-							</div>							
-						</form>
+						<div class="contact-form">
+							<form  id="main-contact-form" class="contact-form row" name="usuarios">													
+								<div class="form-group col-md-12 col-sm-12">
+									<a href="/ropa/usuarioAlta"><input type="button" name="altaU"  class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Alta"/></a>
+								</div>
+								<div class="form-group col-md-12 col-sm-12">
+									<a href="/ropa/usuarioBaja"><input type="button" name="bajaU" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Baja"/></a>
+								</div>
+								<div class="form-group col-md-12 col-sm-12">
+									<a href="/ropa/usuarioModifica"><input type="button" name="modificaU" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Modificación"/></a>
+								</div>	
+								<div class="form-group col-md-12 col-sm-12">
+									<a href="/ropa/verUsuarios"><input type="button" name="listaU" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Listado"/></a>
+								</div>							
+							</form>
+						</div>
 					</div>
 					<div class="col-xs-4 col-sm-4">
 						<form  id="main-contact-form" class="contact-form row" name="productos">													
@@ -102,10 +107,10 @@
 						<div class="contact-form">
 							<form  id="main-contact-form" class="contact-form row" name="stock">													
 								<div class="form-group col-md-12 col-sm-12">
-									<a href="/ropa/altaStock"><input type="button" name="altaS" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Alta"/></a>
+									<a href="/ropa/stockAlta"><input type="button" name="altaS" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Alta"/></a>
 								</div>
 								<div class="form-group col-md-12 col-md-12">
-									<a href="/ropa/revierteStock"><input type="button" name="bajaS" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Revertir"/></a>
+									<a href="/ropa/stockRevierte"><input type="button" name="bajaS" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Revertir"/></a>
 								</div>	
 								<div class="form-group col-md-12 col-sm-12">
 									<a href="/ropa/verStock"><input type="button" name="listaU" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Listado"/></a>

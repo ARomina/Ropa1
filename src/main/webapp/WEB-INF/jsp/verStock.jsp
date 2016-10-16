@@ -46,8 +46,9 @@
                                 </li> 								
 								<li><a href="/ropa/registro">REGISTRO</a></li> 
 								<li><a href="/ropa/contacto">CONTACTO</a></li>
-								<li><a href="/ropa/administrar">ADMINISTRAR(provisorio)</a></li>
-								
+								<li><a href="/ropa/abm">ABM(provisorio)</a></li>
+								<li><a href="/ropa/stock">MANEJO STOCK(provisorio)</a></li>
+								<li><a href="/ropa/verStock" class="active">VER STOCK(provisorio)</a></li>
 							</ul>
 						</div>
 					</div>
@@ -69,11 +70,9 @@
 			<table class="table table-bordered sortable-theme-bootstrap" data-sortable>
 				<thead>
 					<tr>
-						<th>CODIGO DE TRANSACCIÓN</th>
-						<th>CODIGO DE PRODUCTO</th>
-						<th>FECHA</th>
-						<th>PRODUCTO</th>
+						<th>CODIGO</th>
 						<th>CATEGORIA</th>
+						<th>IMAGEN</th>
 						<th>NOMBRE</th>
 						<th>PRECIO</th>
 						<th>COLOR</th>
@@ -82,23 +81,23 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tr>
 				</tbody>
 			</table>
 	  	 </div> 

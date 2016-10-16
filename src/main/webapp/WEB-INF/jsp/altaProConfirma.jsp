@@ -76,7 +76,7 @@
 						<th>PRECIO</th>
 					</tr>
 					<tr>
-						<td>${producto.id}</td>
+						<td> ${producto.id}</td>
 						<td>${producto.categoria}</td>
 						<td>${producto.nombreProducto}</td>
 						<td>${producto.color}</td>	
