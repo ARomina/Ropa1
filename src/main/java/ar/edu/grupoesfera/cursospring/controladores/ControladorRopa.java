@@ -1,18 +1,21 @@
 package ar.edu.grupoesfera.cursospring.controladores;
 
-import javax.inject.Inject;
+import org.springframework.stereotype.Controller;
+
+//import javax.inject.Inject;
 
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+//import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import ar.edu.grupoesfera.cursospring.servicios.ProductoServicio;
+//import ar.edu.grupoesfera.cursospring.servicios.ProductoServicio;
 
-@RestController
+//@RestController
+@Controller
 public class ControladorRopa {
-	@Inject
-	private ProductoServicio servicioproducto;
+	//@Inject
+	//private ProductoServicio servicioproducto;
 	
 	/*ADMINISTRADOR*/
 	@RequestMapping (value = "/administrar")
@@ -44,10 +47,20 @@ public class ControladorRopa {
 		return new ModelAndView ("productosNi", modelo);
 	}
 
-	@RequestMapping ("/agregarRevertirStock")
+	@RequestMapping ("/stock")
 	public ModelAndView cargaStock(){
 		ModelMap modelo = new ModelMap();
-		return new ModelAndView ("agregarRevertirStock", modelo);
+		return new ModelAndView ("stock", modelo);
+	}
+	@RequestMapping ("/altaStock")
+	public ModelAndView formAltaStock(){
+		ModelMap modelo = new ModelMap();
+		return new ModelAndView ("altaStock", modelo);
+	}
+	@RequestMapping ("/revierteStock")
+	public ModelAndView formRevStock(){
+		ModelMap modelo = new ModelMap();
+		return new ModelAndView ("revierteStock", modelo);
 	}
 	@RequestMapping ("/verStock")
 	public ModelAndView cargaVerStock(){
@@ -61,11 +74,11 @@ public class ControladorRopa {
 	}
 
 	/*GETTERS Y SETERS*/
-	public ProductoServicio getServicioproducto() {
+	/*public ProductoServicio getServicioproducto() {
 		return servicioproducto;
 	}
 
 	public void setServicioproducto(ProductoServicio servicioproducto) {
 		this.servicioproducto = servicioproducto;
-	}
+	}*/
 }

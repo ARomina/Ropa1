@@ -39,17 +39,17 @@
 						</div>
 						<div class="mainmenu">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="/ropa1">INICIO</a></li>
+								<li><a href="/ropa">INICIO</a></li>
 								<li class="dropdown"><a href="">PRODUCTOS<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="/ropa1/productosMu">Mujeres</a></li>
-										<li><a href="/ropa1/productosHo">Hombres</a></li> 
-										<li><a href="/ropa1/productosNi">Niños</a></li> 
+                                        <li><a href="/ropa/productosMu">Mujeres</a></li>
+										<li><a href="/ropa/productosHo">Hombres</a></li> 
+										<li><a href="/ropa/productosNi">Niños</a></li> 
                                     </ul>
                                 </li> 								
-								<li><a href="/ropa1/registro">REGISTRO</a></li> 
-								<li><a href="/ropa1/contacto">CONTACTO</a></li>
-								<li><a href="/ropa1/administrar"  class="active">ADMINISTRACION</a></li>
+								<li><a href="/ropa/registro">REGISTRO</a></li> 
+								<li><a href="/ropa/contacto">CONTACTO</a></li>
+								<li><a href="/ropa/administrar"  class="active">ADMINISTRACION</a></li>
 							</ul>
 						</div>
 					</div>
@@ -73,28 +73,33 @@
     		<div class="row">  
 				<div class="col-xs-12 col-sm-12 col-md-12 padding-right"> 
 					<div class="col-xs-4 col-sm-4">
-						<form  id="main-contact-form" class="contact-form row" name="usuarios">													
-							<div class="form-group col-md-12 col-sm-12">
-								<a href="/ropa1/altaUsuFormulario"><input type="button" name="altaU" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Alta"/></a>
-							</div>
-							<div class="form-group col-md-12 col-sm-12">
-								<a href="/ropa1/bajaOmodifUsu"><input type="button" name="bajaU" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Baja / Modificación"/></a>
-							</div>	
-							<div class="form-group col-md-12 col-sm-12">
-								<a href="/ropa1/verUsuarios"><input type="button" name="listaU" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Listado"/></a>
-							</div>							
-						</form>
+						<div class="contact-form">
+							<form  id="main-contact-form" class="contact-form row" name="usuarios">													
+								<div class="form-group col-md-12 col-sm-12">
+									<a href="/ropa/usuarioAlta"><input type="button" name="altaU"  class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Alta"/></a>
+								</div>
+								<div class="form-group col-md-12 col-sm-12">
+									<a href="/ropa/usuarioBaja"><input type="button" name="bajaU" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Baja"/></a>
+								</div>
+								<div class="form-group col-md-12 col-sm-12">
+									<a href="/ropa/usuarioModifica"><input type="button" name="modificaU" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Modificación"/></a>
+								</div>	
+								<div class="form-group col-md-12 col-sm-12">
+									<a href="/ropa/verUsuarios"><input type="button" name="listaU" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Listado"/></a>
+								</div>							
+							</form>
+						</div>
 					</div>
 					<div class="col-xs-4 col-sm-4">
 						<form  id="main-contact-form" class="contact-form row" name="productos">													
 							<div class="form-group col-md-12 col-sm-12">
-								<a href="/ropa1/altaProFormulario"><input type="button" name="altaP" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Alta"/></a>
+								<a href="/ropa/altaProFormulario"><input type="button" name="altaP" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Alta"/></a>
 							</div>
 							<div class="form-group col-md-12 col-sm-12">
-								<a href="/ropa1/bajaOmodifPro"><input type="button" name="bajaP" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Baja / Modificación"/></a>
+								<a href="/ropa/bajaOmodifPro"><input type="button" name="bajaP" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Baja / Modificación"/></a>
 							</div>	
 							<div class="form-group col-md-12 col-sm-12">
-								<a href="/ropa1/verProductos"><input type="button" name="listaP" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Listado"/></a>
+								<a href="/ropa/verProductos"><input type="button" name="listaP" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Listado"/></a>
 							</div>							
 						</form>
 					</div> 
@@ -102,13 +107,13 @@
 						<div class="contact-form">
 							<form  id="main-contact-form" class="contact-form row" name="stock">													
 								<div class="form-group col-md-12 col-sm-12">
-									<a href="/ropa1/agregarRevertirStock"><input type="button" name="altaS" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Agregar stock"/></a>
+									<a href="/ropa/stockAlta"><input type="button" name="altaS" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Alta"/></a>
 								</div>
-								<!--<div class="form-group col-md-12 col-md-12">
-									<a href="/ropa1/stockRevierte"><input type="button" name="bajaS" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Revertir"/></a>
-								</div>-->	
+								<div class="form-group col-md-12 col-md-12">
+									<a href="/ropa/stockRevierte"><input type="button" name="bajaS" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Revertir"/></a>
+								</div>	
 								<div class="form-group col-md-12 col-sm-12">
-									<a href="/ropa1/verStock"><input type="button" name="listaU" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Ver stock"/></a>
+									<a href="/ropa/verStock"><input type="button" name="listaU" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Listado"/></a>
 								</div>							
 							</form>
 						</div>

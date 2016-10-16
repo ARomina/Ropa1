@@ -36,8 +36,8 @@
 						</div>
 						<div class="mainmenu">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="/ropa">INICIO</a></li>
-								<li class="dropdown keep-open"><a href=""  class="active">PRODUCTOS<i class="fa fa-angle-down"></i></a>
+								<li><a href="/ropa" >INICIO</a></li>
+								<li class="dropdown"><a href="" class="active">PRODUCTOS<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="/ropa/productosMu">Mujeres</a></li>
 										<li><a href="/ropa/productosHo">Hombres</a></li> 
@@ -46,13 +46,15 @@
                                 </li> 								
 								<li><a href="/ropa/registro">REGISTRO</a></li> 
 								<li><a href="/ropa/contacto">CONTACTO</a></li>
-								<li><a href="/ropa/administrar">ADMINISTRACION(provisorio)</a></li>
+								<li><a href="/ropa/abm">ABM(provisorio)</a></li>
+								<li><a href="/ropa/stock">MANEJO STOCK(provisorio)</a></li>
+								<li><a href="/ropa/verStock">VER STOCK(provisorio)</a></li>
 							</ul>
 						</div>
 					</div>
-					</div>
 				</div>
 			</div>
+		</div>
 	</header>
 
 	<section>

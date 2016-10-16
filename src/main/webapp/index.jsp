@@ -40,17 +40,17 @@
 						</div>
 						<div class="mainmenu">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="/ropa1" class="active">INICIO</a></li>
+								<li><a href="/ropa" class="active">INICIO</a></li>
 								<li class="dropdown keep-open"><a href="">PRODUCTOS<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="/ropa1/productosMu">Mujeres</a></li>
-										<li><a href="/ropa1/productosHo">Hombres</a></li> 
-										<li><a href="/ropa1/productosNi">Niños</a></li> 
+                                        <li><a href="/ropa/productosMu">Mujeres</a></li>
+										<li><a href="/ropa/productosHo">Hombres</a></li> 
+										<li><a href="/ropa/productosNi">Niños</a></li> 
                                     </ul>
                                 </li> 								
-								<li><a href="/ropa1/registro">REGISTRO</a></li> 
-								<li><a href="/ropa1/contacto">CONTACTO</a></li>
-								<li><a href="/ropa1/administrar">ADMINISTRACION(provisorio)</a></li>
+								<li><a href="/ropa/registro">REGISTRO</a></li> 
+								<li><a href="/ropa/contacto">CONTACTO</a></li>
+								<li><a href="/ropa/administrar">ADMINISTRACION(provisorio)</a></li>
 							</ul>
 						</div>
 					</div>

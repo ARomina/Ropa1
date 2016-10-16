@@ -38,17 +38,17 @@
 						</div>
 						<div class="mainmenu">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="/ropa1">INICIO</a></li>
+								<li><a href="/ropa">INICIO</a></li>
 								<li class="dropdown"><a  class="active" href="">PRODUCTOS<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="/ropa1/productosMu">Mujeres</a></li>
-										<li><a href="/ropa1/productosHo">Hombres</a></li> 
-										<li><a href="/ropa1/productosNi">Niños</a></li>  
+                                        <li><a href="/ropa/productosMu">Mujeres</a></li>
+										<li><a href="/ropa/productosHo">Hombres</a></li> 
+										<li><a href="/ropa/productosNi">Niños</a></li>  
                                     </ul>
                                 </li> 								
-								<li><a href="/ropa1/registro">REGISTRO</a></li> 
-								<li><a href="/ropa1/contacto">CONTACTO</a></li>
-								<li><a href="/ropa1/administrar"  class="active">ADMINISTRACION</a></li>
+								<li><a href="/ropa/registro">REGISTRO</a></li> 
+								<li><a href="/ropa/contacto">CONTACTO</a></li>
+								<li><a href="/ropa/administrar"  class="active">ADMINISTRACION</a></li>
 							</ul>
 						</div>
 					</div>
@@ -76,7 +76,7 @@
 						<th>PRECIO</th>
 					</tr>
 					<tr>
-						<td>${producto.id}</td>
+						<td> ${producto.id}</td>
 						<td>${producto.categoria}</td>
 						<td>${producto.nombreProducto}</td>
 						<td>${producto.color}</td>	
@@ -86,7 +86,7 @@
 			</table>
 
 			<br/>
-			<a href="/ropa1/altaProFormulario"><input type="button" name="volver" class="btn btn-primary pull-right" value="Ingresar Otro"/></a>
+			<a href="/ropa/altaProFormulario"><input type="button" name="volver" class="btn btn-primary pull-right" value="Ingresar Otro"/></a>
 			<br></br>
 	  	 </div> 	    	 
     	</div>	

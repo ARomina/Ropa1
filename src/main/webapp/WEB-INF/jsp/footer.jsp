@@ -31,10 +31,10 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 		  <h3 class="modal-title text-center" id="exampleModalLabel">Grupo 2</h3>
         </div>
-        <div class="modal-body text-center">
-			<a  href="https://plus.google.com/u/0/105630789045182477747" target="_blank" class="color letra">Romina Barraza<br/></a>
-			<a  href="https://plus.google.com/u/0/115607398686688950468" target="_blank" class="color letra">Gisela Gonzalez Miller<br/></a>
-			<a  href="https://plus.google.com/u/0/102081593753271332642" target="_blank" class="color letra">Carolina Gregorio<br/></a>
+        <div class="modal-body">
+			<a  href="https://plus.google.com/u/0/105630789045182477747" target="_blank"><h3 class="modal-title text-center color">Romina Barraza</h3></a>
+			<a  href="https://plus.google.com/u/0/115607398686688950468" target="_blank"><h3 class="modal-title text-center color">Gisela Gonzalez Miller</h3></a>
+			<a  href="https://plus.google.com/u/0/102081593753271332642" target="_blank"><h3 class="modal-title text-center color">Carolina Gregorio</h3></a>
 		</div>
       </div>
     </div>

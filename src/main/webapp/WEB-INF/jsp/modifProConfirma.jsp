@@ -69,9 +69,9 @@
     		<div class="row">  	
 	    		<div class="col-sm-12">
 	    			<div class="contact-form">
-				    	<form:form action="/ropa/modifProOk?id=${producto.id}" modelAttribute="producto" id="main-contact-form" class="contact-form row" role="form" method="POST" name="modifProd">
+				    	<form:form action="" modelAttribute="producto" id="main-contact-form" class="contact-form row"  method="GET" name="modifProd">
 				            <div class="form-group col-md-6">
-				                <form:input path="id" type="text" readonly = "readonly" name="idprod" class="form-control" required="required" placeholder="Codigo"/>
+				                <form:input path="id" type="text" readonly = "readonly" name="idprod" class="form-control" required="required" value="${id}"/>
 				            </div>		
 				            <div class="form-group col-md-6">
 						<form:select path="categoria" class="form-control" name="catProd" id="catProd">
@@ -92,8 +92,9 @@
 				                <form:input path="precio" type="text" name="precio" class="form-control" required="required" placeholder="Precio"/>
 				            </div> 	
 				        <br/>
+						<c:url var="guardaUrl" value="/modifProOk?id=${id}"/>
 						<a href="/ropa/administrar"><input type="button" name="volver" class="btn btn-primary pull-left" value="Cancelar"/></a>
-						<a href="/ropa/modifProOk?id=${producto.id}"><input type="button" name="volver" class="btn btn-primary pull-right" value="Modificar"/></a>
+						<a href="${guardaUrl}"><input type="button" name="volver" class="btn btn-primary pull-right" value="Modificar"/></a>
 						<br></br>											
 				        </form:form>
 
