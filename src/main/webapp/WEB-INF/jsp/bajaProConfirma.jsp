@@ -91,7 +91,7 @@
 			</form:form>
 			<br/>
 			<a href="/ropa/administrar"><input type="button" name="volver" class="btn btn-primary pull-left" value="Cancelar"/></a>
-			<a href="/ropa/bajaProOk?id=${id}"><input type="button" name="volver" class="btn btn-primary pull-right" value="Eliminar"/></a>
+			<a href="/ropa/bajaProOk?id=${producto.id}"><input type="button" name="volver" class="btn btn-primary pull-right" value="Eliminar"/></a>
 			<br></br>
 	  	 </div> 
 	    	 

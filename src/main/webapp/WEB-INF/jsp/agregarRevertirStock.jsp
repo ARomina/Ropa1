@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>	
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +20,7 @@
 <body>
 	<header id="header">
 		<%@include file="header.jsp" %>
-		<%@include file="combo.jsp" %>		
+		<%@include file="combo.jsp" %>
 	
 		<div class="header-bottom">
 			<div class="container">
@@ -38,62 +36,91 @@
 						</div>
 						<div class="mainmenu">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="/ropa1">INICIO</a></li>
-								<li class="dropdown"><a  class="active" href="">PRODUCTOS<i class="fa fa-angle-down"></i></a>
+								<li><a href="/ropa">INICIO</a></li>
+								<li class="dropdown keep-open"><a href="" >PRODUCTOS<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="/ropa1/productosMu">Mujeres</a></li>
 										<li><a href="/ropa1/productosHo">Hombres</a></li> 
-										<li><a href="/ropa1/productosNi">Niños</a></li>  
+										<li><a href="/ropa1/productosNi">Niños</a></li> 
                                     </ul>
                                 </li> 								
 								<li><a href="/ropa1/registro">REGISTRO</a></li> 
 								<li><a href="/ropa1/contacto">CONTACTO</a></li>
-								<li><a href="/ropa1/administrar"  class="active">ADMINISTRACION</a></li>
+								<li><a href="/ropa1/administrar" class="active">ADMINISTRACION</a></li>
 							</ul>
 						</div>
+					</div>
 					</div>
 
 				</div>
 			</div>
-		</div>
+				
 	</header>
 	 
 	 <div id="contact-page" class="container">
     	<div class="bg">
-	    	<div class="row">    		
-	    		<div class="col-sm-12 padding-right">      			   			
-					<h1 class="title text-center">${info}</h1>    			    				    				
+	    	<div class="row">  		
+	    		<div class="col-sm-12 padding-right"> 
+	    		<h1 class="title text-center">AGREGAR STOCK</h1>     			   			
 				</div>			 		
-			</div>  
-		 <div id="contact-page" class="container table-responsive">
-			<table class="table table-bordered sortable-theme-bootstrap" data-sortable>
+			</div>    	
+    		<div class="row">  	
+	    		<div class="col-sm-4">
+	    			<div class="contact-form">
+				    	<form id="main-contact-form" class="contact-form row" name="buscar" method="post">
+				            <div class="form-group col-md-8">
+				                <input type="text" name="idprod" class="form-control" required="required" placeholder="Código">
+				            </div>	
+				            <div class="form-group col-md-4">
+				                <input type="submit" name="stock" class="btn btn-primary" value="Buscar">
+				            </div>																										
+				        </form>
+	    			</div>
+	    		</div>			
+	    	</div>  
+    	</div>	<br/>
+		<div id="contact-page" class="container table-responsive">
+			<table class="table table-bordered">
+				<thead>
 					<tr>
 						<th>CODIGO</th>
 						<th>CATEGORIA</th>
 						<th>NOMBRE</th>
+						<th>PRECIO</th>
 						<th>COLOR</th>
 						<th>TALLE</th>
-						<th>PRECIO</th>
+						<th>CANTIDAD</th>
 					</tr>
-					<tr>
-						<td>${producto.id}</td>
-						<td>${producto.categoria}</td>
-						<td>${producto.nombreProducto}</td>
-						<td>${producto.color}</td>	
-						<td>${producto.talle}</td>
-						<td>${producto.precio}</td>																		
-					</tr>
+				</thead>
+				<tbody>
+					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				</tbody>
 			</table>
-
-			<br/>
-			<a href="/ropa1/altaProFormulario"><input type="button" name="volver" class="btn btn-primary pull-right" value="Ingresar Otro"/></a>
-			<br></br>
-	  	 </div> 	    	 
+		</div>
+		<br/><br/>
+    	<div class="bg">   	
+    		<div class="row">  	
+	    		<div class="col-sm-12">
+	    			<div class="contact-form">
+				    	<form id="main-contact-form" class="contact-form row" name="cantidad" method="post">
+				            <div class="form-group col-md-4">
+				                <input name="fecha" required="required" placeholder="Ingrese Fecha dd/mm/aaaa" id="fecha" type="datetime" class="form-control">
+				            </div>	
+							<div class="form-group col-md-4">
+								<input type="text" name="cantidad" class="form-control" required="required" placeholder="Ingrese Cantidad">
+							</div>
+				            <div class="form-group col-md-4">
+				                <input type="submit" name="suma" class="btn btn-primary" value="Agregar">
+				                <input type="submit" name="suma" class="btn btn-primary" value="Revertir acción">
+				            </div>																										
+				        </form>
+	    			</div>
+	    		</div>			
+	    	</div>  
     	</div>	
     </div>
 	
 	<%@include file="footer.jsp" %>
-	
   
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -101,7 +128,5 @@
     <script src="js/jquery.scrollUp.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
-	<script src="js/validar.js"></script>
-	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 </body>
 </html>

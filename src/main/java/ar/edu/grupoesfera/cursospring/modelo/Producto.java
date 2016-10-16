@@ -8,8 +8,12 @@ public class Producto implements Comparable<Producto>{
 	private String color;
 	private String talle;
 	private Float precio;
-	//private Categoria categoria;
-	private Categorias categoria;
+	private Categoria categoria;
+	/*private Caracteristicas nombreProducto;
+	private Caracteristicas color;
+	private Caracteristicas talle;
+	private Caracteristicas categoria;*/
+	
 
 	/*GETTERS Y SETTERS*/
 	public Integer getId() {
@@ -42,12 +46,36 @@ public class Producto implements Comparable<Producto>{
 	public void setPrecio(Float precio) {
 		this.precio = precio;
 	}
-	public Categorias getCategoria() {
+	public Categoria getCategoria() {
 		return categoria;
 	}
-	public void setCategoria(Categorias categoria) {
+	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+	/*public Caracteristicas getNombreProducto() {
+		return nombreProducto;
+	}
+	public void setNombreProducto(Caracteristicas nombreProducto) {
+		this.nombreProducto = nombreProducto;
+	}
+	public Caracteristicas getColor() {
+		return color;
+	}
+	public void setColor(Caracteristicas color) {
+		this.color = color;
+	}
+	public Caracteristicas getTalle() {
+		return talle;
+	}
+	public void setTalle(Caracteristicas talle) {
+		this.talle = talle;
+	}
+	public Caracteristicas getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(Caracteristicas categoria) {
+		this.categoria = categoria;
+	}*/
 	
 	/*EQUALS Y HASHCODE*/
 	@Override

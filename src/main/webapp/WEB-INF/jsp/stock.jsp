@@ -37,7 +37,7 @@
 						<div class="mainmenu">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="/ropa">INICIO</a></li>
-								<li class="dropdown"><a href="">PRODUCTOS<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown keep-open"><a href="" >PRODUCTOS<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="/ropa/productosMu">Mujeres</a></li>
 										<li><a href="/ropa/productosHo">Hombres</a></li> 
@@ -46,16 +46,14 @@
                                 </li> 								
 								<li><a href="/ropa/registro">REGISTRO</a></li> 
 								<li><a href="/ropa/contacto">CONTACTO</a></li>
-								<li><a href="/ropa/abm">ABM(provisorio)</a></li>
-								<li><a href="/ropa/stock" class="active">MANEJO STOCK(provisorio)</a></li>
-								<li><a href="/ropa/verStock">VER STOCK(provisorio)</a></li>
+								<li><a href="/ropa/administrar" class="active">ADMINISTRACION(provisorio)</a></li>
 							</ul>
 						</div>
+					</div>
 					</div>
 
 				</div>
 			</div>
-		</div>
 				
 	</header>
 	 
@@ -80,7 +78,7 @@
 	    			</div>
 	    		</div>			
 	    	</div>  
-    	</div>	</br>
+    	</div>	<br/>
 		<div id="contact-page" class="container table-responsive">
 			<table class="table table-bordered">
 				<thead>
@@ -99,7 +97,7 @@
 				</tbody>
 			</table>
 		</div>
-		</br></br>
+		<br/><br/>
     	<div class="bg">   	
     		<div class="row">  	
 	    		<div class="col-sm-12">

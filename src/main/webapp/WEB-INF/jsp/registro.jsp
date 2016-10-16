@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,9 +52,7 @@
                                 </li> 								
 								<li><a href="/ropa/registro" class="active">REGISTRO</a></li> 
 								<li><a href="/ropa/contacto">CONTACTO</a></li>
-								<li><a href="/ropa/abm">ABM(provisorio)</a></li>
-								<li><a href="/ropa/stock">MANEJO STOCK(provisorio)</a></li>
-								<li><a href="/ropa/verStock">VER STOCK(provisorio)</a></li>
+								<li><a href="/ropa/administrar">ADMINISTRACION(provisorio)</a></li>
 							</ul>
 						</div>
 					</div>
@@ -72,52 +72,48 @@
     		<div class="row">  	
 	    		<div class="col-sm-12">
 	    			<div class="formulario">
-						<form name="formulario">
-							<div class="form-group col-md-6">
+						<form:form action="/ropa/regUsuConfirma" modelAttribute="usuario" role="form" method="POST" name="formulario" >
+							<div class="form-group col-md-12">
 								<div id="alert1">Debe tener entre 10 y 20 caracteres. </div>			
-								<input type="text" id="nombre" required="required" class="form-control" placeholder="Nombre"/>
+								<form:input path="nombreYapellido" type="text" id="nombre" required="required" class="form-control" placeholder="Nombre y Apellido"/>
 							</div>
 							<div class="form-group col-md-6">
-								<div id="alert1">Debe tener entre 10 y 20 caracteres. </div>			
-								<input type="text" id="apellido" required="required" class="form-control" placeholder="Apellido"/>
+								<div id="alert2">Debe tener 9 caracteres. </div>
+								<form:input path="dni" type="text" id="dni" required="required" class="form-control" placeholder="DNI"/>							
 							</div>
-								<div class="form-group col-md-6">
-									<div id="alert2">Debe tener 9 caracteres. </div>
-									<input type="text" id="dni" required="required" class="form-control" placeholder="DNI"/>							
-								</div>
-								<div class="form-group col-md-6">
-									<input name="datepicker" required="required" value="Fecha de nacimiento" id="datepicker" type="datepicker" class="form-control"/>
-								</div>
-								<div class="form-group col-md-6">
-									<div id="alert6">Ingrese una dirección válida.</div>			
-									<input type="text" id="domicilio" required="required" class="form-control" placeholder="Domicilio">
-								</div>
-								<div class="form-group col-md-6">
-									<div id="alert7">El número ingresado no es válido. </div>
-									<input type="text" id="numero" required="required" class="form-control" placeholder="Teléfono">
-								</div>
-								
-								<div class="form-group col-md-12">
-								<div id="alert3">El e-mail ingresado no es correcto. </div>
-								<input type="email" id="email" required="required" class="form-control" placeholder="E-mail"/>
+							<div class="form-group col-md-6">
+								<form:input path="fechaNacimiento" name="datepicker" required="required" placeholder="Fecha de nacimiento dd/mm/aa"  type="text" class="form-control"/>
 							</div>
-								<div class="form-group col-md-6">
-									<div id="alert4">La contraseña debe tener entre 5 y 10 caracteres y poseer números y letras.</div>
-									<input type="password" id="contraseña" required="required" class="form-control" placeholder="Contraseña" >			
-								</div>
-								<div class="form-group col-md-6">
-									<div id="alert5">Las contraseñas no coinciden. </div>
-									<input type="password" id="contraseña2" required="required" class="form-control" placeholder="Repetir Contraseña"/>
-								</div>
+							<div class="form-group col-md-6">
+								<div id="alert6">Ingrese una dirección válida.</div>			
+								<form:input path="domicilio" type="text" id="domicilio" required="required" class="form-control" placeholder="Domicilio"/>
+							</div>
+							<div class="form-group col-md-6">
+								<div id="alert7">El número ingresado no es válido. </div>
+								<form:input path="telefono" type="text" id="numero" required="required" class="form-control" placeholder="Teléfono"/>
+							</div>
+							
+							<div class="form-group col-md-12">
+							<div id="alert3">El e-mail ingresado no es correcto. </div>
+							<form:input path="eMail" type="email" id="email" required="required" class="form-control" placeholder="E-mail"/>
+							</div>
+							<div class="form-group col-md-6">
+								<div id="alert4">La contraseña debe tener entre 5 y 10 caracteres y poseer números y letras.</div>
+								<input type="password" id="contraseña" required="required" class="form-control" placeholder="Contraseña"/>			
+							</div>
+							<div class="form-group col-md-6">
+								<div id="alert5">Las contraseñas no coinciden. </div>
+								<form:input path="clave" type="password" id="contraseña2" required="required" class="form-control" placeholder="Repetir Contraseña"/>
+							</div>
 							<div class="form-group col-md-12">
 								<div class="form-group col-md-6">
-									<input type="reset" href="" class="btn btn-primary pull-left"/>						
+									<input type="reset" class="btn btn-primary pull-left"/>						
 								</div>
 								<div class="form-group col-md-6">
 									<input type="submit" id= "boton" name="submit" class="btn btn-primary pull-right" value="Registrar"/>
 								</div>
 							</div>							
-						</form>
+						</form:form>
 	    			</div>
 	    		</div>  			
 	    	</div>  

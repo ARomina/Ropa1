@@ -46,9 +46,9 @@
 										<li><a href="/ropa/productosNi">Niños</a></li>  
                                     </ul>
                                 </li> 								
-								<li><a href="/ropa/registro">REGISTRO</a></li> 
+								<li><a href="/ropa/registro" class="active">REGISTRO</a></li> 
 								<li><a href="/ropa/contacto">CONTACTO</a></li>
-								<li><a href="/ropa/administrar"  class="active">ADMINISTRACION</a></li>
+								<li><a href="/ropa/administrar">ADMINISTRACION</a></li>
 							</ul>
 						</div>
 					</div>
@@ -66,39 +66,19 @@
 				</div>			 		
 			</div>    	
     		<div class="row">  	
-	    		<div class="col-sm-12">
-	    			<div class="contact-form">
-				        <form:form action="/ropa/bajaProducto" id="main-contact-form" class="contact-form row" name="bajaProd" role="form" method="POST">		
-							<div id="oculto" class="col-md-12">
-								<table class="table table-bordered sortable-theme-bootstrap col-md-12" data-sortable>
-									<tr>
-										<th>CODIGO</th>
-										<th>CATEGORIA</th>
-										<th>NOMBRE</th>
-										<th>COLOR</th>
-										<th>TALLE</th>
-										<th>PRECIO</th>										
-
-									</tr>
-									<c:forEach items="${productos}" var="producto">
-									<tr>
-										<td>${producto.id}</td>
-										<td>${producto.categoria}</td>
-										<td>${producto.nombreProducto}</td>
-										<td>${producto.color}</td>	
-										<td>${producto.talle}</td>
-										<td>${producto.precio}</td>																					
-									</tr>
-									</c:forEach>
-								</table>							
-							</div>
-				        </form:form>
+	    		<div class="col-sm-12 text-center">
+				<h4>Nombre y Apellido: ${usuario.nombreYapellido}</h4>
+				<h4>DNI: ${usuario.dni}</h4>
+				<h4>Domicilio: ${usuario.domicilio}</h4>
+				<h4>Teléfono: ${usuario.telefono}</h4>
+				<h4>Fecha de Nacimiento: ${usuario.fechaNacimiento}</h4>
+				<h4>E-Mail: ${usuario.eMail}</h4>
+				<h4>Contraseña: ${usuario.clave}</h4>
 				<br/>
-				<a href="/ropa/bajaOmodifPro"><input type="button" name="volver" class="btn btn-primary pull-right" value="${boton}"/></a>
+				<a href="/ropa"><input type="button" name="volver" class="btn btn-primary pull-right" value="Volver"/></a>
 				<br></br>
-	    			</div>
 	    		</div>  			
-	    	</div> 	    	 
+	    	</div>   
     	</div>	
     </div>
 	

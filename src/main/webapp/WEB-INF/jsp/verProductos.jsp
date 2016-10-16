@@ -76,7 +76,7 @@
 						<th>TALLE</th>
 						<th>PRECIO</th>
 					</tr>
-				<c:forEach items="${productos}" var="producto">
+				<c:forEach items="${servicioproducto}" var="producto">
 					<tr>
 						<td>${producto.id}</td>
 						<td>${producto.categoria}</td>

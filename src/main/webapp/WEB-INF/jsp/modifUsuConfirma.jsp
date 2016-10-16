@@ -50,7 +50,7 @@
 										<li><a href="/ropa/productosNi">Niños</a></li>  
                                     </ul>
                                 </li> 								
-								<li><a href="/ropa/registro">REGISTRO</a></li> 
+								<li><a href="/ropa/registro" class="active">REGISTRO</a></li> 
 								<li><a href="/ropa/contacto">CONTACTO</a></li>
 								<li><a href="/ropa/administrar"  class="active">ADMINISTRACION</a></li>
 							</ul>
@@ -66,13 +66,13 @@
     	<div class="bg">
 	    	<div class="row">    		
 	    		<div class="col-sm-12 padding-right">      			   			
-					<h1 class="title text-center">Alta de Usuarios</h1>    			    				    				
+					<h1 class="title text-center">MODIFICACIÓN DE USUARIO</h1>    			    				    				
 				</div>			 		
 			</div>    	
     		<div class="row">  	
 	    		<div class="col-sm-12">
 	    			<div class="formulario">
-						<form:form action="/ropa/altaUsuConfirma" modelAttribute="usuario" role="form" method="POST" name="formulario">
+						<form:form action="/ropa/modifUsuOk?eMail=${usuario.eMail}" modelAttribute="usuario" id="main-contact-form" class="contact-form row" role="form" method="POST" name="modifUsu">
 							<div class="form-group col-md-12">
 								<div id="alert1">Debe tener entre 10 y 20 caracteres. </div>			
 								<form:input path="nombreYapellido" type="text" id="nombre" required="required" class="form-control" placeholder="Nombre y Apellido"/>
@@ -104,14 +104,11 @@
 							<div class="form-group col-md-6">			
 								<form:input path="tipo" type="text" id="tipo" required="required" class="form-control" placeholder="Tipo"/>
 							</div>							
-							<div class="form-group col-md-12">
-								<div class="form-group col-md-6">
-									<input type="reset" class="btn btn-primary pull-left"/>						
-								</div>
-								<div class="form-group col-md-6">
-									<input type="submit" id= "boton" name="submit" class="btn btn-primary pull-right" value="Ingrear"/>
-								</div>
-							</div>							
+				        <br/>
+						<a href="/ropa/administrar"><input type="button" name="volver" class="btn btn-primary pull-left" value="Cancelar"/></a>
+						<input type="submit" id= "boton" name="submit" class="btn btn-primary pull-right" value="Modificar"/>
+						<!--<a href="/ropa/modifUsuOk?eMail=${usuario.eMail}"><input type="button" name="volver" class="btn btn-primary pull-right" value="Modificar"/></a>-->
+						<br></br>								
 						</form:form>
 	    			</div>
 	    		</div>  			

@@ -59,7 +59,7 @@
 				
 	</header>
 	 
-	 <div id="contact-page" class="container">
+	<div id="contact-page" class="container">
     	<div class="bg">
 	    	<div class="row">  		
 	    		<div class="col-sm-12 padding-right"> 
@@ -69,7 +69,7 @@
     		<div class="row">  	
 	    		<div class="col-sm-12">
 	    			<div class="contact-form">
-	    				<form:form action="" modelAttribute="producto" id="main-contact-form" class="contact-form row"  method="POST" name="bajaProd">	
+	    				<form:form action="" modelAttribute="producto" id="main-contact-form" class="contact-form row" role="form" method="POST" name="bajaProd">	
 							<div class="col-md-12">
 								<table class="table table-bordered sortable-theme-bootstrap col-md-12" data-sortable>
 									<tr>
@@ -88,7 +88,7 @@
 										<td>${producto.nombreProducto}</td>
 										<td>${producto.color}</td>	
 										<td>${producto.talle}</td>
-										<td>${producto.precio}</td>											
+										<td>${producto.precio}</td>															
 										<td><a href="/ropa/modifProConfirma?id=${producto.id}" class="pull-left color2">Modificar</a>	
 										    <a href="/ropa/bajaProConfirma?id=${producto.id}" class="pull-right color2">Eliminar</a></td>											
 									</tr>

@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,7 +69,7 @@
 			  </div>
 				<div class="modal-footer">	
 					<a href="#registro">¿No tenés cuenta? Registrate </a>
-					<button type="submit" href="" class="btn btn-primary pull-right" id="boton">Ingresar</button>
+					<button type="submit"  class="btn btn-primary pull-right" id="boton">Ingresar</button>
 				</div>
 			</form>
 		</div>

@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page import="ar.edu.grupoesfera.cursospring.modelo.*" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>	
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +22,7 @@
 <body>
 	<header id="header">
 		<%@include file="header.jsp" %>
-		<%@include file="combo.jsp" %>
+		<%@include file="combo.jsp" %>		
 	
 		<div class="header-bottom">
 			<div class="container">
@@ -44,12 +43,12 @@
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="/ropa/productosMu">Mujeres</a></li>
 										<li><a href="/ropa/productosHo">Hombres</a></li> 
-										<li><a href="/ropa/productosNi">Niños</a></li> 
+										<li><a href="/ropa/productosNi">Niños</a></li>  
                                     </ul>
                                 </li> 								
 								<li><a href="/ropa/registro">REGISTRO</a></li> 
 								<li><a href="/ropa/contacto">CONTACTO</a></li>
-								<li><a href="/ropa/administrar" class="active">ADMINISTRACION</a></li>
+								<li><a href="/ropa/administrar"  class="active">ADMINISTRACION</a></li>
 							</ul>
 						</div>
 					</div>
@@ -57,55 +56,54 @@
 				</div>
 			</div>
 		</div>
-				
 	</header>
 	 
 	 <div id="contact-page" class="container">
     	<div class="bg">
-	    	<div class="row">  		
-	    		<div class="col-sm-12 padding-right"> 
-	    		<h1 class="title text-center">ALTA de Productos</h1>     			   			
+	    	<div class="row">    		
+	    		<div class="col-sm-12 padding-right">      			   			
+					<h1 class="title text-center">CONFIRMAR BAJA DE USUARIO</h1>    			    				    				
 				</div>			 		
-			</div>    	
-    		<div class="row">  	
-	    		<div class="col-sm-12">
-	    			<div class="contact-form">
-				    	<form:form action="/ropa/altaProConfirma" modelAttribute="producto" id="main-contact-form" class="contact-form row" role="form" method="POST" name="altaProd">
-				            <div class="form-group col-md-6">
-				                <form:input path="id" type="text" name="idprod" class="form-control" required="required" placeholder="Código"/>
-				            </div>		
-				            <div class="form-group col-md-6">
-						<form:select path="categoria" class="form-control" name="catProd" id="catProd">
-							<form:option value="NONE" label="Seleccionar Categoría"/>
-							<form:options items="${Categoria.categoria}"></form:options>
-						</form:select>
-				            </div>								
-				            <div class="form-group col-md-12">
-				                <form:input path="nombreProducto" type="text" name="nombre" class="form-control" required="required" placeholder="Nombre"/>
-				            </div>
-					            <div class="form-group col-md-4">
-				                <form:input path="color" type="text" name="color" class="form-control" required="required" placeholder="Color"/>
-				            </div>
-				            <div class="form-group col-md-4">
-				                <form:input path="talle" type="text" name="talle" class="form-control" required="required" placeholder="Talle"/>
-				            </div>
-				            <div class="form-group col-md-4">
-				                <form:input path="precio" type="text" name="precio" class="form-control" required="required" placeholder="Precio"/>
-				            </div> 	
-				            <div class="form-group col-md-12">
-				                <input  type="file" name="imagenprod" class="btn btn-primary pull-left" id="producto-imagen"/>
-				            </div>													
-				            <div class="form-group col-md-12">
-				                <input type="submit" name="alta" class="btn btn-primary pull-right" value="Ingresar"/>
-				            </div>
-				        </form:form>
-	    			</div>
-	    		</div>  				
-	    	</div>  
-    	</div>
+			</div> 
+		
+		 <div id="contact-page" class="container table-responsive">
+		<form:form action="" modelAttribute="usuario" id="main-contact-form" class="contact-form row"  method="GET" name="bajaUsu">
+			<table class="table table-bordered sortable-theme-bootstrap" data-sortable>
+					<tr>
+						<th>NOMBRE Y APELLIDO</th>
+						<th>DNI</th>
+						<th>DOMICILIO</th>
+						<th>TELEFONO</th>
+						<th>FECHA NACIMIENTO</th>
+						<th>E-MAIL</th>
+						<th>CONTRASEÑA</th>
+						<th>TIPO</th>
+					</tr>
+
+					<tr>
+						<td>${usuario.nombreYapellido}</td>
+						<td>${usuario.dni}</td>
+						<td>${usuario.domicilio}</td>
+						<td>${usuario.telefono}</td>
+						<td>${usuario.fechaNacimiento}</td>
+						<td>${usuario.eMail}</td>	
+						<td>${usuario.clave}</td>
+						<th>${usuario.tipo}</th>										
+					</tr>
+
+			</table>
+			</form:form>
+			<br/>
+			<a href="/ropa/administrar"><input type="button" name="volver" class="btn btn-primary pull-left" value="Cancelar"/></a>
+			<a href="/ropa/bajaUsuOk?eMail=${usuario.eMail}"><input type="button" name="volver" class="btn btn-primary pull-right" value="Eliminar"/></a>
+			<br></br>
+	  	 </div> 
+	    	 
+    	</div>	
     </div>
 	
 	<%@include file="footer.jsp" %>
+	
   
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -113,5 +111,7 @@
     <script src="js/jquery.scrollUp.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
+	<script src="js/validar.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 </body>
 </html>
