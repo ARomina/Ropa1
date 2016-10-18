@@ -49,7 +49,7 @@
                                 </li> 								
 								<li><a href="/ropa/registro">REGISTRO</a></li> 
 								<li><a href="/ropa/contacto">CONTACTO</a></li>
-								<li><a href="/ropa/administrar" class="active">ADMINISTRACION</a></li>
+								<li><a href="/ropa1/administrar" class="active">ADMINISTRACION</a></li>
 							</ul>
 						</div>
 					</div>
@@ -70,7 +70,7 @@
     		<div class="row">  	
 	    		<div class="col-sm-12">
 	    			<div class="contact-form">
-				    	<form:form action="/ropa/altaProConfirma" modelAttribute="producto" id="main-contact-form" class="contact-form row" role="form" method="POST" name="altaProd">
+				    	<form:form action="/ropa1/altaProConfirma" modelAttribute="producto" id="main-contact-form" class="contact-form row" role="form" method="POST" name="altaProd">
 				            <div class="form-group col-md-6">
 				                <form:input path="id" type="text" name="idprod" class="form-control" required="required" placeholder="Código"/>
 				            </div>		

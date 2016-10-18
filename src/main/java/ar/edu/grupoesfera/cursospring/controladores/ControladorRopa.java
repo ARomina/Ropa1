@@ -8,11 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.grupoesfera.cursospring.servicios.ProductoServicio;
+import ar.edu.grupoesfera.cursospring.servicios.StockServicio;
 
 @RestController
 public class ControladorRopa {
 	@Inject
 	private ProductoServicio servicioproducto;
+	private StockServicio servicioStock;
 	
 	/*ADMINISTRADOR*/
 	@RequestMapping (value = "/administrar")
@@ -44,16 +46,6 @@ public class ControladorRopa {
 		return new ModelAndView ("productosNi", modelo);
 	}
 
-	@RequestMapping ("/agregarRevertirStock")
-	public ModelAndView cargaStock(){
-		ModelMap modelo = new ModelMap();
-		return new ModelAndView ("agregarRevertirStock", modelo);
-	}
-	@RequestMapping ("/verStock")
-	public ModelAndView cargaVerStock(){
-		ModelMap modelo = new ModelMap();
-		return new ModelAndView ("verStock", modelo);
-	}
 	@RequestMapping ("/carrito")
 	public ModelAndView cargaCarrito(){
 		ModelMap modelo = new ModelMap();
@@ -68,4 +60,14 @@ public class ControladorRopa {
 	public void setServicioproducto(ProductoServicio servicioproducto) {
 		this.servicioproducto = servicioproducto;
 	}
+
+	public StockServicio getServicioStock() {
+		return servicioStock;
+	}
+
+	public void setServicioStock(StockServicio servicioStock) {
+		this.servicioStock = servicioStock;
+	}
+	
+	
 }

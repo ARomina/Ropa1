@@ -9,6 +9,7 @@ public class Producto implements Comparable<Producto>{
 	private String talle;
 	private Float precio;
 	private Categoria categoria;
+	//private Integer cantidad = 0;
 	/*private Caracteristicas nombreProducto;
 	private Caracteristicas color;
 	private Caracteristicas talle;
@@ -51,6 +52,12 @@ public class Producto implements Comparable<Producto>{
 	}
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}/*
+	public Integer getCantidad() {
+		return cantidad;
+	}
+	public void setCantidad(Integer cantidad) {
+		this.cantidad = cantidad;
 	}
 	/*public Caracteristicas getNombreProducto() {
 		return nombreProducto;

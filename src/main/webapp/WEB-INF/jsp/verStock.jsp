@@ -39,13 +39,13 @@
 								<li><a href="/ropa">INICIO</a></li>
 								<li class="dropdown"><a href="">PRODUCTOS<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="/ropa1/productosMu">Mujeres</a></li>
-										<li><a href="/ropa1/productosHo">Hombres</a></li> 
-										<li><a href="/ropa1/productosNi">Niños</a></li> 
+                                        <li><a href="/ropa/productosMu">Mujeres</a></li>
+										<li><a href="/ropa/productosHo">Hombres</a></li> 
+										<li><a href="/ropa/productosNi">Niños</a></li> 
                                     </ul>
                                 </li> 								
-								<li><a href="/ropa1/registro">REGISTRO</a></li> 
-								<li><a href="/ropa1/contacto">CONTACTO</a></li>
+								<li><a href="/ropa/registro">REGISTRO</a></li> 
+								<li><a href="/ropa/contacto">CONTACTO</a></li>
 								<li><a href="/ropa1/administrar"  class="active">ADMINISTRACION</a></li>
 							</ul>
 						</div>
@@ -61,7 +61,7 @@
 	   	<div class="bg">
 	    	<div class="row">  		
 	    		<div class="col-sm-12 padding-right"> 
-	    		<h1 class="title text-center">Control de Stock</h1>     			   			
+	    		<h1 class="title text-center">VER STOCK</h1>     			   			
 				</div>			 		
 			</div>    	
 		 <div id="contact-page" class="container table-responsive">
@@ -79,6 +79,7 @@
 					</tr>
 				</thead>
 				<tbody>
+				<!--
 					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
@@ -96,6 +97,18 @@
 					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				-->
+				<c:forEach items="${servicioStock}" var="producto">
+					<tr>
+						<td>${producto.id}</td>
+						<td>${producto.categoria}</td>
+						<td>${producto.nombreProducto}</td>
+						<td>${producto.color}</td>	
+						<td>${producto.talle}</td>	
+						<td>${producto.precio}</td>			
+						<td>${producto.cantidad}</td>														
+					</tr>
+				</c:forEach>
 				</tbody>
 			</table>
 	  	 </div> 

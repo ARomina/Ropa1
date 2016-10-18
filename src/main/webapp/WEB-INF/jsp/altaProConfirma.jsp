@@ -41,13 +41,13 @@
 								<li><a href="/ropa1">INICIO</a></li>
 								<li class="dropdown"><a  class="active" href="">PRODUCTOS<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="/ropa1/productosMu">Mujeres</a></li>
-										<li><a href="/ropa1/productosHo">Hombres</a></li> 
-										<li><a href="/ropa1/productosNi">Niños</a></li>  
+                                        <li><a href="/ropa/productosMu">Mujeres</a></li>
+										<li><a href="/ropa/productosHo">Hombres</a></li> 
+										<li><a href="/ropa/productosNi">Niños</a></li>  
                                     </ul>
                                 </li> 								
-								<li><a href="/ropa1/registro">REGISTRO</a></li> 
-								<li><a href="/ropa1/contacto">CONTACTO</a></li>
+								<li><a href="/ropa/registro">REGISTRO</a></li> 
+								<li><a href="/ropa/contacto">CONTACTO</a></li>
 								<li><a href="/ropa1/administrar"  class="active">ADMINISTRACION</a></li>
 							</ul>
 						</div>
