@@ -2,36 +2,36 @@ package ar.edu.grupoesfera.cursospring.servicios;
 
 import java.util.Map;
 
+//import java.util.Map;
+
 import org.springframework.stereotype.Service;
 
 import ar.edu.grupoesfera.cursospring.modelo.Producto;
-import ar.edu.grupoesfera.cursospring.modelo.ColeccionProducto; //??
+
+//import ar.edu.grupoesfera.cursospring.modelo.Producto;
+//import ar.edu.grupoesfera.cursospring.modelo.ColeccionProducto; //??
 
 @Service ("servicioStock")
 public class StockServicioImpl implements StockServicio{
 	
-	public Boolean agregarProductoAlStock(){
+	@Override
+	public Boolean ingresoIdStock(){
 		return null;
 	}
 	
-	public Map<Producto, Integer> verStockExistente(){
+	@Override
+	public Boolean agregarStock(){
 		return null;
+	}
+	
+	@Override
+	public Map<Producto, Integer> verStock(){
+		 return null;
 	}
 	
 	/*
-	@Override
-	public (...) agregarStock(){
-	   return null;
-	}
+	public Map<Producto, Integer> verStockExistente(){
+		return null;
+	}*/
 	
-	@Override
-	public (...) revertirStock(){
-	   return null;
-	}
-	
-	@Override
-	public Map<Productos, Integer> verStock(){
-	   return null;
-	}
-	*/
 }

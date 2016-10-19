@@ -1,4 +1,4 @@
-package ar.edu.grupoesfera.cursospring.modelo;
+/*package ar.edu.grupoesfera.cursospring.modelo;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -29,7 +29,8 @@ public class ColeccionStock {
 		/*si ColeccionProducto no tiene ningun producto agregado
 		 *queda todo el Stock vacio (null?)  
 		 */
-		
+		//forEachRemaining ?? --> de Iterator
+        /*
 		public Boolean agregarProductoAlStock(Producto producto){
 			if(this.listaStock.containsKey(producto)){
 				return false;
@@ -37,7 +38,7 @@ public class ColeccionStock {
 			this.listaStock.put(producto, 0);
 			return true;
 			}
-		}
+		}*/
 		
 		//Asignar cantidad 0 a cada Producto
 		//listaStock.put(producto, 0);
@@ -60,8 +61,8 @@ public class ColeccionStock {
 		          }
 		      }
 		}*/
-	
-	//Ver lista de stock (con o sin cantidad) 
+	/*
+	//Ver lista de stock
 	public Map<Producto, Integer> verStockExistente(){
 		return this.listaStock;
 	}
@@ -79,4 +80,4 @@ public class ColeccionStock {
 		ColeccionStock.instance = instance;
 	}
 
-}
+}*/

@@ -1,6 +1,7 @@
 package ar.edu.grupoesfera.cursospring.modelo;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -13,6 +14,7 @@ public class Stock {
 	private static Stock instance = new Stock();
 	//Creación de la
 	//Creación de la lista del stock
+	
 	private Map<Producto, Integer> listaStock = new HashMap<Producto, Integer>();
 	
 	//Llama a la instancia
@@ -21,75 +23,67 @@ public class Stock {
 	}
 	
 	//Constructor
-	private Stock(){}
-	
-	//Métodos
-	//Ver lista de productos existentes
-	public Map<Producto, Integer> verStockExistente(){
-		return listaStock;
+	private Stock(){
+		Integer cantidad = 0;
+		//String fechaStock;
 	}
 	
-	/*public ColeccionProducto getListaProducto() {
-        return (ColeccionProducto)listaStock.values();
-    }
+	//Busca producto por codigo ingresado -> si existe muestra sus datos (como objeto Stock)
 	/*
-    public Item getItem(String itemCode) {
-        return stock.get(itemCode);
-    }
-
-    public boolean containsSalesItem(String itemCode) {
-        if (stock.containsKey(itemCode)) {
-            return stock.containsKey(itemCode);
-        } else {
-            return false;
-        }
-    }
+	public Map<Producto, Integer> buscarStock(Integer id){
+		ColeccionProducto productos = ColeccionProducto.getInstance();
+		for(Producto prod : listaStock.keySet()){
+			if(id.equals(prod.getId())){
+			   prod.getId();
+			   prod.setNombreProducto(Producto.get());
+			   
+			}
+		}
+		
+		return this.listaStock;
+	}*/
 	
-	
-	
-	
-	/*
-	//Muestra listado de existencias
-	public Set<Producto> verProductosExistentes(){
-		return listaStock.keySet();
-	}
-	/* 
-	public Boolean verStock(Producto producto)throws Exception{
-  		if(this.ColeccionProductos.contains(producto)){
-        	throw new Exception("EL CODIGO DE PRODUCTO YA EXISTE"); 
+    //Ingreso del codigo -> si ya existe, te dice, sino lo trae de la colección y lo muestra
+	public Boolean ingresoIdStock(Integer idproducto)throws Exception{
+  		if(this.listaStock.containsKey(idproducto)){
+        	throw new Exception("EL CODIGO DE PRODUCTO YA EXISTE");
         }
         else{
-        	this.productos.add(producto);  
+        	this.listaStock.keySet();  
         	return true;
         } 
-    }*/
-	/*
-	   Producto producto = ColeccionProducto.Producto.getId(id);
-	   if (producto == null) {
-	       return null; //no hay productos con ese id
-	   }else{
-	       return coleccionProducto.getId();
-	   }
+    }
+	
+	//Agregar fecha y cantidad sobre el producto encontrado
+	public void agregarStock(Producto producto, Integer cantidad/*, String fechaStock*/){
+	    listaStock.put(producto, cantidad);
+	    //FECHA STOCK?????? 
+		}
+	
+	//Ver lista de Stock
+	public Map<Producto, Integer> verStock(){
+		return this.listaStock;
+	}
+	
+		/*
+		for(Iterator<Producto> it = productos.iterator(); it.hasNext();){
+	  	    	  Producto cada = it.next();
+		    		if(cada.getId().equals(producto.getId())){
+		    	    cada.getId();
+	            	cada.setCategoria(producto.getCategoria());
+	            	cada.setNombreProducto(producto.getNombreProducto());
+	            	cada.setColor(producto.getColor());
+	            	cada.setTalle(producto.getTalle());
+	            	cada.setPrecio(producto.getPrecio());
+	            }
+	          }
+		return this.listaStock;
 	}*/
 	/*
-	public Boolean altaProducto(Producto producto)throws Exception{
-  		if(this.productos.contains(producto)){
-        	throw new Exception("EL CODIGO DE PRODUCTO YA EXISTE"); 
-        }
-        else{
-        	this.productos.add(producto);  
-        	return true;
-        } 
-    }
-	
-	
-	public Set<Producto> verProductos(){
-		return this.productos;
-	}
-	
-	//Muestra listado de existencias
-	public Set<Producto> verProductosExistentes(){
-		return listaStock.keySet();
+	//Agrega producto que ya existe en la coleccion al Stock
+	public void agregarProductoAlStock(Producto producto, Integer cantidad){
+    listaStock.put(producto, cantidad);
+     
 	}*/
 	
 	//Getters y Setters
@@ -104,7 +98,5 @@ public class Stock {
 	public static void setInstance(Stock instance) {
 		Stock.instance = instance;
 	}
-		
-	
 	
 }

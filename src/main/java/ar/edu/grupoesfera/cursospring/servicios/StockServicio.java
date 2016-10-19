@@ -1,19 +1,18 @@
 package ar.edu.grupoesfera.cursospring.servicios;
 
-import ar.edu.grupoesfera.cursospring.modelo.Producto;
-
 import java.util.Map;
-
-import ar.edu.grupoesfera.cursospring.modelo.ColeccionProducto; //??
+import ar.edu.grupoesfera.cursospring.modelo.Producto;
 
 public interface StockServicio {
 		
-	   Boolean agregarProductoAlStock();
-	   Map<Producto, Integer> verStockExistente();
-	
+	   Boolean ingresoIdStock();
+	   Boolean agregarStock();
+	   Map<Producto, Integer> verStock();
+	   
+	   //Map<Producto, Integer> verStockExistente();
 		/* 
 		 * (...) agregarStock();
 		 * (...) revertirStock();  //??
-		 * Map<Productos, Integer> verStock();
+		 * Map<Producto, Integer> verStock();
 		 * */
 }

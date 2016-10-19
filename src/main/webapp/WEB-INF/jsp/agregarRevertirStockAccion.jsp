@@ -40,18 +40,17 @@
 						<div class="mainmenu">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="/ropa">INICIO</a></li>
-								<li class="dropdown"><a href="">PRODUCTOS<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown keep-open"><a href="" >PRODUCTOS<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="/ropa/productosMu">Mujeres</a></li>
 										<li><a href="/ropa/productosHo">Hombres</a></li> 
-										<li><a href="/ropa/productosNi">Niños</a></li>  
+										<li><a href="/ropa/productosNi">Niños</a></li> 
                                     </ul>
                                 </li> 								
 								<li><a href="/ropa/registro">REGISTRO</a></li> 
 								<li><a href="/ropa/contacto">CONTACTO</a></li>
-								<li><a href="/ropa1/administrar"  class="active">ADMINISTRACION</a></li>
+								<li><a href="/ropa1/administrar" class="active">ADMINISTRACION</a></li>
 							</ul>
-						</div>
 						</div>
 					</div>
 					</div>
@@ -65,18 +64,18 @@
     	<div class="bg">
 	    	<div class="row">  		
 	    		<div class="col-sm-12 padding-right"> 
-	    		<h1 class="title text-center">${info}</h1>   			   			
+	    		<h1 class="title text-center">${info}</h1>     			   			
 				</div>			 		
 			</div>    	
     		<div class="row">  	
 	    		<div class="col-sm-4">
 	    			<div class="contact-form">
-				    	<form:form action="/ropa1/stockResultadoBusqueda" ModelAttribute="producto" id="main-contact-form" class="contact-form row" name="buscar" method="POST">
+				    	<form:form action="/ropa1/agregarRevertirStock" ModelAttribute="producto" id="main-contact-form" class="contact-form row" name="buscar" method="POST">
 				            <div class="form-group col-md-8">
 				                <input type="text" name="idproducto" class="form-control" required="required" path="idproducto" placeholder="Código">
 				            </div>	
 				            <div class="form-group col-md-4">
-				               <input type="submit" name="stock" class="btn btn-primary" value="Buscar">
+				                <input type="submit" name="stock" class="btn btn-primary" value="Buscar">
 				            </div>																										
 				        </form:form>
 	    			</div>
