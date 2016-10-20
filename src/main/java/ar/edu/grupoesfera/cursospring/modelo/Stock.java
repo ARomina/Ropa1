@@ -12,7 +12,7 @@ public class Stock {
 	
 	//Creación de la instancia de stock
 	private static Stock instance = new Stock();
-	//Creación de la
+	//Integer cantidad;
 	//Creación de la lista del stock
 	
 	private Map<Producto, Integer> listaStock = new HashMap<Producto, Integer>();
@@ -26,6 +26,7 @@ public class Stock {
 	private Stock(){
 		Integer cantidad = 0;
 		//String fechaStock;
+		//this.cantidad = 0;
 	}
 	
 	//Busca producto por codigo ingresado -> si existe muestra sus datos (como objeto Stock)
@@ -44,7 +45,7 @@ public class Stock {
 	}*/
 	
     //Ingreso del codigo -> si ya existe, te dice, sino lo trae de la colección y lo muestra
-	public Boolean ingresoIdStock(Integer idproducto)throws Exception{
+	/*public Boolean ingresoIdStock(Integer idproducto)throws Exception{
   		if(this.listaStock.containsKey(idproducto)){
         	throw new Exception("EL CODIGO DE PRODUCTO YA EXISTE");
         }
@@ -52,9 +53,49 @@ public class Stock {
         	this.listaStock.keySet();  
         	return true;
         } 
-    }
+    }**/
 	
-	//Agregar fecha y cantidad sobre el producto encontrado
+	
+    public Boolean ingresoIdStock(Integer idproducto){
+  		if(this.listaStock.containsKey(idproducto)){
+        	this.listaStock.keySet(); 
+        	return true;
+        }
+        else{ 
+        	return false;
+        } 
+    }
+	/*
+	public Boolean ingresoIdStock(Integer idproducto){
+		boolean contains = false;
+		for (Producto product: id) {
+		    if (Producto.getId() == inputParam) { // I used getId(), replace that by the accessor you actually need
+		        contains = true;
+		        break;
+		    }
+		}
+		if (contains) {
+			this.listaStock.keySet(); 
+			return true;
+		} else {
+			throw new Exception("EL CODIGO INGRESADO NO EXISTE");
+		    return false;
+		}
+	}*/
+	
+	/*
+	public Boolean ingresoIdStock(Integer idproducto)throws Exception{
+		Producto producto = ;
+  		if(!(idproducto.equals(producto.getId()))){
+        	throw new Exception("EL CODIGO DE PRODUCTO YA EXISTE");
+        }
+        else{
+        	this.listaStock.keySet();  
+        	return true;
+        } 
+    }*/
+	
+	//Agregar fecha y cantidad sobre el producto encontrado*/
 	public void agregarStock(Producto producto, Integer cantidad/*, String fechaStock*/){
 	    listaStock.put(producto, cantidad);
 	    //FECHA STOCK?????? 

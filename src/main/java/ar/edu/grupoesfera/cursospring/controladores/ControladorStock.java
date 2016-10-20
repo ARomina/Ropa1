@@ -41,12 +41,17 @@ public class ControladorStock {
 			String info;
 			Stock servicioStock = Stock.getInstance();
 			ModelMap modelo = new ModelMap();
-			if(servicioStock.ingresoIdStock(idproducto)){
+			try{
+				servicioStock.ingresoIdStock(idproducto);
 				info = "PRODUCTO ENCONTRADO";
-				servicioStock.verStock();
+			}catch(Exception e){
+				info = "PRODUCTO NO ENCONTRADO";
 			}
-			
-			
+			modelo.put("idproducto", idproducto);
+			modelo.put("info", info);
+			return new ModelAndView ("stockResultadoBusqueda", modelo);
+		}
+			/*
 			try{
 				servicioStock.ingresoIdStock(idproducto);
 				info="PRODUCTO ENCONTRADO";
