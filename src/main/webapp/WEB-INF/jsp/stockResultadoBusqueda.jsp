@@ -93,7 +93,7 @@
 						<th>PRECIO</th>
 						<th>COLOR</th>
 						<th>TALLE</th>
-						<!--<th>CANTIDAD</th>-->
+						<th>CANTIDAD</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -106,10 +106,9 @@
 						<td>${producto.color}</td>	
 						<td>${producto.talle}</td>	
 						<td>${producto.precio}</td>
-						<!--<td>${stock.cantidad}</td>-->
-																
+						<!--<td>${stock.cantidad}</td>-->										
 					</tr>
-				</c:forEach>
+					</c:forEach>
 				</tbody>
 			</table>
 		</div>

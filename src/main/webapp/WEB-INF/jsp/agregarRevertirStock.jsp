@@ -71,12 +71,11 @@
     		<div class="row">  	
 	    		<div class="col-sm-4">
 	    			<div class="contact-form">
-				    	<form:form action="/ropa1/stockResultadoBusqueda" ModelAttribute="producto" id="main-contact-form" class="contact-form row" name="buscar" method="POST">
+				    	<form:form action="/ropa1/stockResultadoBusqueda" ModelAttribute="producto" id="main-contact-form" class="contact-form row" name="buscar" method="GET">
 				            <div class="form-group col-md-8">
 				                <input type="text" name="idProd" class="form-control" required="required" path="idProd" value="" placeholder="Código">
 				            </div>	
 				            <div class="form-group col-md-4">
-				               <!--<a href="/ropa1/stockResultadoBusqueda?id=${producto.id}">Buscar</a>-->
 				               <input type="submit" name="stock" class="btn btn-primary" value="Buscar">
 				            </div>																										
 				        </form:form>
@@ -97,21 +96,21 @@
 						<th>CANTIDAD</th>
 					</tr>
 				</thead>
-				<tbody>
-					<!--<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>-->
-					<c:forEach items="${servicioStock}" var="producto">
-					<tr>
-						<td>${producto.id}</td>
-						<td>${producto.categoria}</td>
-						<td>${producto.nombreProducto}</td>
-						<td>${producto.color}</td>	
-						<td>${producto.talle}</td>	
-						<td>${producto.precio}</td>
-						<td>${producto.cantidad}</td>
+<!-- 				<tbody> -->
+<!-- 					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr> -->
+<%-- 					<c:forEach items="${productos}" var="producto"> --%>
+<!-- 					<tr> -->
+<%-- 						<td>${producto.id}</td> --%>
+<%-- 						<td>${producto.categoria}</td> --%>
+<%-- 						<td>${producto.nombreProducto}</td> --%>
+<%-- 						<td>${producto.color}</td>	 --%>
+<%-- 						<td>${producto.talle}</td>	 --%>
+<%-- 						<td>${producto.precio}</td> --%>
+<%-- 						<td>${producto.cantidad}</td> --%>
 																
-					</tr>
-				</c:forEach>
-				</tbody>
+<!-- 					</tr> -->
+<%-- 				</c:forEach> --%>
+<!-- 				</tbody> -->
 			</table>
 		</div>
 		<br/><br/>
