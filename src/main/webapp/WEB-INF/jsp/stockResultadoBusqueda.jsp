@@ -72,10 +72,11 @@
 	    			<div class="contact-form">
 				    	<form:form action="/ropa1/agregarRevertirStockAccion" ModelAttribute="producto" id="main-contact-form" class="contact-form row" name="buscar" method="POST">
 				            <div class="form-group col-md-8">
-				                <input type="text" name="idproducto" class="form-control" required="required" path="idproducto" value="${idproductoS}" placeholder="Código">
+				                <input type="text" name="idProd" class="form-control" required="required" path="idProd" value="${idProd}" placeholder="Código">
 				            </div>	
 				            <div class="form-group col-md-4">
-				                <input type="submit" name="stock" class="btn btn-primary" value="Buscar">
+				                <a href="/ropa1/stockResultadoBusqueda?id=${producto.id}">Buscar</a>
+				                <!--<input type="submit" name="stock" class="btn btn-primary" value="Buscar">-->
 				            </div>																										
 				        </form:form>
 	    			</div>
@@ -92,12 +93,12 @@
 						<th>PRECIO</th>
 						<th>COLOR</th>
 						<th>TALLE</th>
-						<th>CANTIDAD</th>
+						<!--<th>CANTIDAD</th>-->
 					</tr>
 				</thead>
 				<tbody>
 					<!--<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>-->
-					<c:forEach items="${servicioStock}" var="producto">
+					<c:forEach items="${productos}" var="producto">
 					<tr>
 						<td>${producto.id}</td>
 						<td>${producto.categoria}</td>
@@ -105,7 +106,7 @@
 						<td>${producto.color}</td>	
 						<td>${producto.talle}</td>	
 						<td>${producto.precio}</td>
-						<td>${producto.cantidad}</td>
+						<!--<td>${stock.cantidad}</td>-->
 																
 					</tr>
 				</c:forEach>

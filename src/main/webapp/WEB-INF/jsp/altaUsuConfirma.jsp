@@ -48,7 +48,7 @@
                                 </li> 								
 								<li><a href="/ropa/registro">REGISTRO</a></li> 
 								<li><a href="/ropa/contacto">CONTACTO</a></li>
-								<li><a href="/ropa/administrar"  class="active">ADMINISTRACION</a></li>
+								<li><a href="/ropa1/administrar"  class="active">ADMINISTRACION</a></li>
 							</ul>
 						</div>
 					</div>
@@ -91,7 +91,7 @@
 
 			</table>
 			<br/>
-			<a href="/ropa/altaUsuFormulario"><input type="button" name="volver" class="btn btn-primary pull-right" value="Ingresar Otro"/></a>
+			<a href="/ropa1/altaUsuFormulario"><input type="button" name="volver" class="btn btn-primary pull-right" value="Ingresar Otro"/></a>
 			<br></br>
 	  	 </div>  
     	</div>	

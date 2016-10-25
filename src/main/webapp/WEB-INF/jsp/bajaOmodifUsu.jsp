@@ -48,7 +48,7 @@
                                 </li> 								
 								<li><a href="/ropa/registro">REGISTRO</a></li> 
 								<li><a href="/ropa/contacto">CONTACTO</a></li>
-								<li><a href="/ropa/administrar"  class="active">ADMINISTRACION</a></li>
+								<li><a href="/ropa1/administrar"  class="active">ADMINISTRACION</a></li>
 							</ul>
 						</div>
 					</div>
@@ -93,8 +93,8 @@
 										<td>${usuario.eMail}</td>	
 										<td>${usuario.clave}</td>
 										<th>${usuario.tipo}</th>														
-										<td><a href="/ropa/modifUsuConfirma?eMail=${usuario.eMail}" class="pull-left color2">Modificar</a>	
-											<a href="/ropa/bajaUsuConfirma?eMail=${usuario.eMail}" class="pull-right color2">Eliminar</a></td>											
+										<td><a href="/ropa1/modifUsuConfirma?eMail=${usuario.eMail}" class="pull-left color2">Modificar</a>	
+											<a href="/ropa1/bajaUsuConfirma?eMail=${usuario.eMail}" class="pull-right color2">Eliminar</a></td>											
 									</tr>
 									</c:forEach>
 								</table>

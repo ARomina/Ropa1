@@ -46,7 +46,7 @@ public class ColeccionUsuario {
         } 
     }
 	
-	/*LISTADO DE PRODUCTOS*/
+	/*LISTADO DE USUARIOS*/
 	public Set<Usuario> verUsuarios(){
 		return this.usuarios;
 	}

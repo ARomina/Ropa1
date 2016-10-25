@@ -2,7 +2,7 @@ package ar.edu.grupoesfera.cursospring.controladores;
 
 import javax.inject.Inject;
 
-import org.springframework.stereotype.Controller;
+//import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,11 +11,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import ar.edu.grupoesfera.cursospring.modelo.ColeccionProducto;
+//import ar.edu.grupoesfera.cursospring.modelo.ColeccionProducto;
 import ar.edu.grupoesfera.cursospring.modelo.Producto;
 import ar.edu.grupoesfera.cursospring.modelo.Stock;
 import ar.edu.grupoesfera.cursospring.servicios.StockServicio;
-//import ar.edu.grupoesfera.cursospring.modelo.ColeccionStock;
 
 @RestController
 public class ControladorStock {
@@ -29,11 +28,63 @@ public class ControladorStock {
 			ModelMap modelo = new ModelMap();
 			String info;
 			info = "AGREGAR STOCK";
-			//Stock servicioStock = Stock.getInstance();
 			modelo.put("info", info);
 			return new ModelAndView ("agregarRevertirStock", modelo);
 		}
 		
+		//Biscar codigo ingresado y retornar si hay PRODUCTO
+		/*@RequestMapping (path = "/stockResultadoBusqueda", method = RequestMethod.POST)
+		public ModelAndView verProductoSiHayStock(@ModelAttribute("producto")Producto producto,
+									              @RequestParam (value="idProd")Integer idProd){
+			String info;
+			ModelMap modelo = new ModelMap();
+			ColeccionProducto productos = ColeccionProducto.getInstance();
+			Stock servicioStock = Stock.getInstance();
+			try{
+				servicioStock.buscarId(producto);
+			    info="PRODUCTO ENCONTRADO";
+			}catch(Exception e){
+				info= e.getMessage();
+			}
+			modelo.put("info", info);
+			modelo.put("producto", servicioStock.verStock());
+			return new ModelAndView ("/stockResultadoBusqueda", modelo);
+		}*/
+		@RequestMapping (value = "/stockResultadoBusqueda", method = RequestMethod.POST)
+		public ModelAndView verProductoSiHayStock(@ModelAttribute("producto")Producto producto,
+										@RequestParam (value="idProd")Integer idProd){
+			String info;
+			ModelMap modelo = new ModelMap();
+			//ColeccionProducto productos = ColeccionProducto.getInstance();
+			Stock servicioStock = Stock.getInstance();
+			try{
+				servicioStock.buscarId(idProd, producto);
+				info = "PRODUCTO ENCONTRADO";
+			}catch(Exception e){
+				info = "PRODUCTO NO ENCONTRADO";
+				//info= e.getMessage();
+			}
+			modelo.put("idproducto", idProd);
+			modelo.put("info", info);
+			return new ModelAndView ("stockResultadoBusqueda", modelo);
+		}
+		/*
+		@RequestMapping (path = "/modifUsuOk")
+		public ModelAndView modifUsuOk(@ModelAttribute("usuario")Usuario usuario,
+	            					   @RequestParam (value="eMail")String eMail){
+			String info;
+			String boton="Modificar Otro";
+			ModelMap modelo = new ModelMap();
+			ColeccionUsuario serviciousuario = ColeccionUsuario.getInstance();
+			serviciousuario.modificacionUsuario(usuario);	
+			info="MODIFICACION DE USUARIO EXITOSA";		
+			modelo.put("info", info);
+			modelo.put("boton", boton);
+			modelo.put("usuarios", serviciousuario.verUsuarios());
+			return new ModelAndView ("/bajaOmodifUsuOk", modelo);
+		}
+		
+		/*
 		//Buscar stock
 		@RequestMapping (value = "/stockResultadoBusqueda", method = RequestMethod.POST)
 		public ModelAndView buscarStock(@ModelAttribute("producto")Producto producto,
@@ -107,6 +158,17 @@ public class ControladorStock {
 			//modelo.put("servicioStock", servicioStock.verStock());
 			return new ModelAndView ("verStock", modelo);
 		}*/
+		
+		//Getters y Setters
+
+		public StockServicio getServicioStock() {
+			return servicioStock;
+		}
+
+		public void setServicioStock(StockServicio servicioStock) {
+			this.servicioStock = servicioStock;
+		}
+		
 	
 }
 

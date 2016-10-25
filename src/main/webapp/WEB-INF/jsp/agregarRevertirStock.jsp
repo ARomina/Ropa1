@@ -73,9 +73,10 @@
 	    			<div class="contact-form">
 				    	<form:form action="/ropa1/stockResultadoBusqueda" ModelAttribute="producto" id="main-contact-form" class="contact-form row" name="buscar" method="POST">
 				            <div class="form-group col-md-8">
-				                <input type="text" name="idproducto" class="form-control" required="required" path="idproducto" value="" placeholder="Código">
+				                <input type="text" name="idProd" class="form-control" required="required" path="idProd" value="" placeholder="Código">
 				            </div>	
 				            <div class="form-group col-md-4">
+				               <!--<a href="/ropa1/stockResultadoBusqueda?id=${producto.id}">Buscar</a>-->
 				               <input type="submit" name="stock" class="btn btn-primary" value="Buscar">
 				            </div>																										
 				        </form:form>

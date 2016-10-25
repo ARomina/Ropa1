@@ -1,6 +1,7 @@
 package ar.edu.grupoesfera.cursospring.servicios;
 
 import java.util.Map;
+import java.util.Set;
 
 //import java.util.Map;
 
@@ -13,25 +14,29 @@ import ar.edu.grupoesfera.cursospring.modelo.Producto;
 
 @Service ("servicioStock")
 public class StockServicioImpl implements StockServicio{
-	
+
 	@Override
-	public Boolean ingresoIdStock(){
+	public Set<Producto> buscarId() {
+		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 	@Override
-	public Boolean agregarStock(){
+	public Map<Producto, Integer> buscaEnStock() {
+		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 	@Override
-	public Map<Producto, Integer> verStock(){
-		 return null;
-	}
-	
-	/*
-	public Map<Producto, Integer> verStockExistente(){
+	public Map<Producto, Integer> agregaAlStock() {
+		// TODO Auto-generated method stub
 		return null;
-	}*/
+	}
+
+	@Override
+	public Map<Producto, Integer> verStock() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

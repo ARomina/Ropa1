@@ -52,7 +52,7 @@
                                 </li> 								
 								<li><a href="/ropa/registro">REGISTRO</a></li> 
 								<li><a href="/ropa/contacto">CONTACTO</a></li>
-								<li><a href="/ropa/administrar"  class="active">ADMINISTRACION</a></li>
+								<li><a href="/ropa1/administrar"  class="active">ADMINISTRACION</a></li>
 							</ul>
 						</div>
 					</div>
@@ -72,7 +72,7 @@
     		<div class="row">  	
 	    		<div class="col-sm-12">
 	    			<div class="formulario">
-						<form:form action="/ropa/altaUsuConfirma" modelAttribute="usuario" role="form" method="POST" name="formulario">
+						<form:form action="/ropa1/altaUsuConfirma" modelAttribute="usuario" role="form" method="POST" name="formulario">
 							<div class="form-group col-md-12">
 								<div id="alert1">Debe tener entre 10 y 20 caracteres. </div>			
 								<form:input path="nombreYapellido" type="text" id="nombre" required="required" class="form-control" placeholder="Nombre y Apellido"/>
@@ -109,7 +109,7 @@
 									<input type="reset" class="btn btn-primary pull-left"/>						
 								</div>
 								<div class="form-group col-md-6">
-									<input type="submit" id= "boton" name="submit" class="btn btn-primary pull-right" value="Ingrear"/>
+									<input type="submit" id= "boton" name="submit" class="btn btn-primary pull-right" value="Ingresar"/>
 								</div>
 							</div>							
 						</form:form>
