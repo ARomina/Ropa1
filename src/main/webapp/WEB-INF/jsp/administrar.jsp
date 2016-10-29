@@ -102,7 +102,7 @@
 						<div class="contact-form">
 							<form  id="main-contact-form" class="contact-form row" name="stock">													
 								<div class="form-group col-md-12 col-sm-12">
-									<a href="/ropa1/agregarRevertirStock"><input type="button" name="altaS" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Agregar stock"/></a>
+									<a href="/ropa1/agregarStockVista"><input type="button" name="altaS" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Agregar stock"/></a>
 								</div>
 								<!--<div class="form-group col-md-12 col-md-12">
 									<a href="/ropa1/stockRevierte"><input type="button" name="bajaS" class="btn btn-primary pull-left col-xs-12 col-md-12 col-sm-12" value="Revertir"/></a>

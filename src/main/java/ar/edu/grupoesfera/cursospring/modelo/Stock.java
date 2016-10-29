@@ -1,101 +1,128 @@
 package ar.edu.grupoesfera.cursospring.modelo;
 
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
+//import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-//import ar.edu.grupoesfera.cursospring.modelo.ColeccionProducto;
-import ar.edu.grupoesfera.cursospring.modelo.Producto;
-
 public class Stock {
-	
-	//Creación de la instancia de stock
-	//Creación de cantidad y stock (Map)
-	private Map<Producto, Integer> listaStock = new HashMap<Producto, Integer>();
-	private Integer cantidad;
+
 	private static Stock instance = new Stock();
-	private Set<Producto> productos;
+	private Map<Producto, Integer> listaStock = new HashMap<Producto, Integer>();
 	
-	//Llamado a la instancia
+	//Llamar la instancia
 	public static Stock getInstance(){
 		return instance;
 	}
 	
 	//Constructor
-	private Stock(){
-		//Integer cantidad = 0;
-		//String fechaStock;
-		//this.cantidad = 0;
+	public Stock(){}
+	
+	//Métodos
+	
+	//Ver lista de productos
+	public Set<Producto> verProductosDisponibles(){
+		return listaStock.keySet();
 	}
 	
-	// 1) Busca el código ingresado en PRODUCTOS(COLECCION), si está lo trae; sino, mensaje
-		public Set<Producto> buscarId(Integer idProducto, Producto producto)throws Exception{
-			if(!this.productos.contains(producto)){ //antes tenía producto.getId()
-				throw new Exception("EL CODIGO INGRESADO NO EXISTE");
-			}
-			else{
-				return this.productos;
-			}
-		}
-		/*
-		public Boolean altaProducto(Producto producto)throws Exception{
-	  		if(this.productos.contains(producto)){
-	        	throw new Exception("EL CODIGO DE PRODUCTO YA EXISTE"); 
-	        }
-	        else{
-	        	this.productos.add(producto);  
-	        	return true;
-	        } 
-	    }*/
+	//Ver Stock (MAPA)
+	public Map<Producto, Integer> verTodoStock(){
+		return listaStock;
+	}
 	
-	// 2) Busca el Producto en STOCK; si está, trae la cantidad; sino, cantidad = 0
-	/*public Map<Producto, Integer> buscaEnStock(Producto producto)throws Exception{
-		if(this.listaStock.containsKey(producto)){
-			this.listaStock.put(producto, cantidad);
+	//Comprobar si el map stock está vacío
+	public Boolean ComprobarStockVacio(){
+		if(this.listaStock.isEmpty()){
+			return true;  //"si, está vacio"
 		}
 		else{
-			this.listaStock.put(producto, 0);
-		}
-		
-		return this.listaStock;
-	}*/
-		
-    //INTENTO 1
-	// 1) Busca el código ingresado en PRODUCTOS(COLECCION), si está lo trae; sino, mensaje
-	
-	
-	//INTENTO 2
-	//2) Busca el Producto en STOCK; si está, trae la cantidad; sino, cantidad = 0
-	public Boolean buscaEnStock(Producto producto){
-		if(this.listaStock.containsKey(producto)){
+			//si tiene algo, false, "no, no está vacio"
 			return false;
 		}
-		else{
+	}
+	/*
+	public void guardaProductoExistente(Producto producto){
+	      for(Iterator<Producto> it = productos.iterator(); it.hasNext();){
+	    	  Producto cada = it.next();
+	    		if(producto.getId().equals(cada.getId())){
+	    			producto.setId(cada.getId());
+	    			producto.setCategoria(cada.getCategoria());
+	    			producto.setNombreProducto(cada.getNombreProducto());
+	    			producto.setColor(cada.getColor());
+	    			producto.setTalle(cada.getTalle());
+	    			producto.setPrecio(cada.getPrecio());
+	          }
+	      }
+	}*/
+	
+	//Agrega producto al stock
+	public Boolean agregarProductoAStockNOMEIMPORTA(Producto producto){
+		if(!this.listaStock.containsKey(producto)){
 			this.listaStock.put(producto, 0);
 			return true;
 		}
+		else{
+		    return true;
+		}
+		    
 	}
 	
-	// 3) Agrega PRODUCTO en STOCK, con su CANTIDAD
-	public Boolean agregaAlStock(Producto producto, Integer cantidad){
+	//Pone el producto en el stock, con cantidad en 0, si está devuelve false (no agrega nada, porque ya está en stock)
+	public Boolean agregarProductoAStockSiNoEsta(Producto producto){
+		if(this.listaStock.containsKey(producto)){
+			return false;
+		}
+		else{
+		//si no está en el stock, lo agrega al mapa con cantidad 0
+			this.listaStock.put(producto, 0);
+		    return true;
+		}
+	}
+	
+	//Agregar existencias al producto en stock; si no contiene el producto, retorna false (no hace nada porque no está)
+	public Boolean agregarStock(Producto producto, Integer cantidad){
 		if(!this.listaStock.containsKey(producto)){
 			return false;
 		}
+		
+		//Al ingresar una cantidad nueva, al ponerla en producto, la misma se suma a la cantidad que ya tenia
 		Integer cantidadNueva = this.listaStock.get(producto) + cantidad;
 		this.listaStock.put(producto, cantidadNueva);
 		return true;
 	}
+	/*
+	//Retorna cantidades
+	public Boolean verCantidad(Producto producto){
+		if(this.listaStock.containsKey(producto)){
+			this.listaStock.get(producto).
+			return false;
+		}
+		//si no está en el stock, lo agrega al mapa con cantidad 0
+		this.listaStock.put(producto, 0);
+		return true;
+	}*/
 	
-	/*public void agregaProductosAlStock(Producto producto, Integer cantidad){
-		this.listaStock.put(producto, cantidad);
-	}
-	*/
-	
-	//Ver lista de Stock
-	public Map<Producto, Integer> verStock(){
-		return listaStock;
-	}
-	
+	//Trae y lista todos los productos de COLECCION PRODUCTO
+	//Si existen en el MAP de STOCK --> trae los datos (PRODUCTO) y la cantidad (STOCK)
+	//Si no, trae los datos (PRODUCTO) y la cantidad la pone en 0
+	/*public Map<Producto, Integer> verProductosConSinStock(){
+		for(Iterator<Producto> it = productos.iterator();it.hasNext();){
+			Producto producto = it.next();
+			if(listaStock.containsKey(producto)){
+				this.listaStock.values();
+			}
+			else{
+				this.listaStock.put(producto, 0);
+			}
+		}
+		
+		//Retorno la lista como quedó
+		return this.listaStock;
+		
+	}*/
+
 	//Getters y Setters
 	public Map<Producto, Integer> getListaStock() {
 		return listaStock;
@@ -105,24 +132,34 @@ public class Stock {
 		this.listaStock = listaStock;
 	}
 
-	public Integer getCantidad() {
-		return cantidad;
-	}
-
-	public void setCantidad(Integer cantidad) {
-		this.cantidad = cantidad;
-	}
-
-	public Set<Producto> getProductos() {
-		return productos;
-	}
-
-	public void setProductos(Set<Producto> productos) {
-		this.productos = productos;
-	}
-
 	public static void setInstance(Stock instance) {
 		Stock.instance = instance;
+	}
+
+	//HashCode / Equals
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((listaStock == null) ? 0 : listaStock.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Stock other = (Stock) obj;
+		if (listaStock == null) {
+			if (other.listaStock != null)
+				return false;
+		} else if (!listaStock.equals(other.listaStock))
+			return false;
+		return true;
 	}
 	
 }

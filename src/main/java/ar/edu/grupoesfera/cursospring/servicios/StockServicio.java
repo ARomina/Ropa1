@@ -6,10 +6,11 @@ import java.util.Set;
 import ar.edu.grupoesfera.cursospring.modelo.Producto;
 
 public interface StockServicio {
-		
-	   Set<Producto> buscarId();
-	   Map<Producto, Integer> buscaEnStock();
-	   Map<Producto, Integer> agregaAlStock();
-	   Map<Producto, Integer> verStock();
-	   
+	//Map<Producto, Integer> verProductosConSinStock();
+	void agregarProductoAStockNOMEIMPORTA();
+	Boolean comprobarStockVacio();
+	Boolean agregarProductoAStockSiNoEsta();
+	Boolean agregarStock();
+	Set<Producto> verProductosDisponibles();
+	Map<Producto, Integer> verTodoStock();
 }

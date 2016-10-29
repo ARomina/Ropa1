@@ -2,7 +2,6 @@
     pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page import="ar.edu.grupoesfera.cursospring.modelo.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,7 +39,7 @@
 						<div class="mainmenu">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="/ropa">INICIO</a></li>
-								<li class="dropdown keep-open"><a href="" >PRODUCTOS<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="">PRODUCTOS<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="/ropa/productosMu">Mujeres</a></li>
 										<li><a href="/ropa/productosHo">Hombres</a></li> 
@@ -53,14 +52,14 @@
 							</ul>
 						</div>
 					</div>
-					</div>
 
 				</div>
 			</div>
+		</div>
 				
 	</header>
 	 
-	 <div id="contact-page" class="container">
+	<div id="contact-page" class="container">
     	<div class="bg">
 	    	<div class="row">  		
 	    		<div class="col-sm-12 padding-right"> 
@@ -68,71 +67,41 @@
 				</div>			 		
 			</div>    	
     		<div class="row">  	
-	    		<div class="col-sm-4">
-	    			<div class="contact-form">
-				    	<form:form action="/ropa1/agregarRevertirStockAccion" ModelAttribute="stock" id="main-contact-form" class="contact-form row" name="buscar" method="GET">
-				            <div class="form-group col-md-8">
-				                <input type="text" name="idProducto" class="form-control" required="required" path="idProducto" value="${idProducto}" placeholder="Código">
-				            </div>	
-				            <div class="form-group col-md-4">
-				                <a href="/ropa1/stockResultadoBusqueda?id=${producto.id}">Buscar</a>
-				                <!--<input type="submit" name="stock" class="btn btn-primary" value="Buscar">-->
-				            </div>																										
-				        </form:form>
-	    			</div>
-	    		</div>			
-	    	</div>  
-    	</div>	<br/>
-		<div id="contact-page" class="container table-responsive">
-			<table class="table table-bordered">
-				<thead>
-					<tr>
-						<th>CODIGO</th>
-						<th>CATEGORIA</th>
-						<th>NOMBRE</th>
-						<th>PRECIO</th>
-						<th>COLOR</th>
-						<th>TALLE</th>
-						<th>CANTIDAD</th>
-					</tr>
-				</thead>
-				<tbody>
-					<!--<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>-->
-					<c:forEach items="${servicioStock}" var="producto">
-					<tr>
-						<td>${producto.id}</td>
-						<td>${producto.categoria}</td>
-						<td>${producto.nombreProducto}</td>
-						<td>${producto.color}</td>	
-						<td>${producto.talle}</td>	
-						<td>${producto.precio}</td>
-						<!--<td>${stock.cantidad}</td>-->										
-					</tr>
-					</c:forEach>
-				</tbody>
-			</table>
-		</div>
-		<br/><br/>
-    	<div class="bg">   	
-    		<div class="row">  	
 	    		<div class="col-sm-12">
 	    			<div class="contact-form">
-				    	<form id="main-contact-form" class="contact-form row" name="cantidad" method="post">
-				            <div class="form-group col-md-4">
-				                <input name="fecha" required="required" placeholder="Ingrese Fecha dd/mm/aaaa" id="fecha" type="datetime" class="form-control">
-				            </div>	
-							<div class="form-group col-md-4">
-								<input type="text" name="cantidad" class="form-control" required="required" placeholder="Ingrese Cantidad">
+	    				<form:form action="" modelAttribute="producto" id="main-contact-form" class="contact-form row" role="form" method="POST" name="verStock">	
+							<div class="col-md-12">
+								<table class="table table-bordered sortable-theme-bootstrap col-md-12" data-sortable>
+									<tr>
+										<th>CODIGO</th>
+										<th>CATEGORIA</th>
+										<th>NOMBRE</th>
+										<th>COLOR</th>
+										<th>TALLE</th>
+										<th>PRECIO</th>
+										<th>CANTIDAD</th>										
+										<th class="text-center">ACCIÓN</th>
+									</tr>
+									<c:forEach items="${productos}" var="producto">
+									<tr>
+										<td>${producto.key.id}</td>
+										<td>${producto.key.categoria}</td>
+										<td>${producto.key.nombreProducto}</td>
+										<td>${producto.key.color}</td>	
+										<td>${producto.key.talle}</td>
+										<td>${producto.key.precio}</td>
+										<td>${producto.value}</td>
+										
+										<td class="text-center"><a href="/ropa1/agregarStock/?id=${producto.key.id}" class="color2">Agregar stock</a></td>																					
+									</tr>
+									</c:forEach>
+								</table>							
 							</div>
-				            <div class="form-group col-md-4">
-				                <input type="submit" name="suma" class="btn btn-primary" value="Agregar">
-				                <input type="submit" name="suma" class="btn btn-primary" value="Revertir acción">
-				            </div>																										
-				        </form>
+						</form:form>
 	    			</div>
-	    		</div>			
+	    		</div>  				
 	    	</div>  
-    	</div>	
+    	</div>
     </div>
 	
 	<%@include file="footer.jsp" %>

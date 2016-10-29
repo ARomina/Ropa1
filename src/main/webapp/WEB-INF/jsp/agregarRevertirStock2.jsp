@@ -40,17 +40,18 @@
 						<div class="mainmenu">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="/ropa">INICIO</a></li>
-								<li class="dropdown keep-open"><a href="" >PRODUCTOS<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="">PRODUCTOS<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="/ropa/productosMu">Mujeres</a></li>
 										<li><a href="/ropa/productosHo">Hombres</a></li> 
-										<li><a href="/ropa/productosNi">Niños</a></li> 
+										<li><a href="/ropa/productosNi">Niños</a></li>  
                                     </ul>
                                 </li> 								
 								<li><a href="/ropa/registro">REGISTRO</a></li> 
 								<li><a href="/ropa/contacto">CONTACTO</a></li>
-								<li><a href="/ropa1/administrar" class="active">ADMINISTRACION</a></li>
+								<li><a href="/ropa1/administrar"  class="active">ADMINISTRACION</a></li>
 							</ul>
+						</div>
 						</div>
 					</div>
 					</div>
@@ -64,19 +65,18 @@
     	<div class="bg">
 	    	<div class="row">  		
 	    		<div class="col-sm-12 padding-right"> 
-	    		<h1 class="title text-center">${info}</h1>     			   			
+	    		<h1 class="title text-center">${info}</h1>   			   			
 				</div>			 		
 			</div>    	
     		<div class="row">  	
 	    		<div class="col-sm-4">
 	    			<div class="contact-form">
-				    	<form:form action="/ropa1/agregarRevertirStockAccion" ModelAttribute="stock" id="main-contact-form" class="contact-form row" name="buscar" method="GET">
+				    	<form:form action="/ropa1/stockResultadoBusqueda?id=${idProducto}" ModelAttribute="stock" id="main-contact-form" class="contact-form row" name="buscar" method="POST">
 				            <div class="form-group col-md-8">
-				                <input type="text" name="idProducto" class="form-control" required="required" path="idProducto" value="${idProducto}" placeholder="Código">
+				                <input type="text" name="idProducto" class="form-control" required="required" path="idProducto" value="" placeholder="Código">
 				            </div>	
 				            <div class="form-group col-md-4">
-				                <a href="/ropa1/stockResultadoBusqueda?id=${producto.id}">Buscar</a>
-				                <!--<input type="submit" name="stock" class="btn btn-primary" value="Buscar">-->
+				               <input type="submit" name="stock" class="btn btn-primary" value="Buscar">
 				            </div>																										
 				        </form:form>
 	    			</div>
@@ -97,19 +97,33 @@
 					</tr>
 				</thead>
 				<tbody>
-					<!--<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>-->
-					<c:forEach items="${servicioStock}" var="producto">
-					<tr>
-						<td>${producto.id}</td>
-						<td>${producto.categoria}</td>
-						<td>${producto.nombreProducto}</td>
-						<td>${producto.color}</td>	
-						<td>${producto.talle}</td>	
-						<td>${producto.precio}</td>
-						<!--<td>${stock.cantidad}</td>-->										
-					</tr>
-					</c:forEach>
-				</tbody>
+				<tr>
+				<c:forEach items="${productos}" var="producto">
+				<tr>
+				<td>${producto.id}</td> 
+ 						<td>${producto.categoria}</td>
+ 						<td>${producto.nombreProducto}</td> 
+ 						<td>${producto.color}</td>	 
+ 						<td>${producto.talle}</td>	 
+ 						<td>${producto.precio}</td> 
+ 						<td>${producto.cantidad}</td> 
+ 						</tr>
+ 						</c:forEach>
+ 			</tbody> 
+<!-- 					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr> -->
+<%-- 					<c:forEach items="${productos}" var="producto"> --%>
+<!-- 					<tr> -->
+<%-- 						<td>${producto.id}</td> --%>
+<%-- 						<td>${producto.categoria}</td> --%>
+<%-- 						<td>${producto.nombreProducto}</td> --%>
+<%-- 						<td>${producto.color}</td>	 --%>
+<%-- 						<td>${producto.talle}</td>	 --%>
+<%-- 						<td>${producto.precio}</td> --%>
+<%-- 						<td>${producto.cantidad}</td> --%>
+																
+<!-- 					</tr> -->
+<%-- 				</c:forEach> --%>
+<!-- 				</tbody> -->
 			</table>
 		</div>
 		<br/><br/>
