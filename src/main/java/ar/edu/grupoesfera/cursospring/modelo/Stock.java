@@ -42,6 +42,15 @@ public class Stock {
 			return false;
 		}
 	}
+	
+	//Retorna la cantidad en stock de un determinado producto
+	public Integer verStockProducto(Producto producto){
+		if(!this.listaStock.containsKey(producto)){
+			return 0;
+		}
+		return this.listaStock.get(producto);
+	}
+	
 	/*
 	public void guardaProductoExistente(Producto producto){
 	      for(Iterator<Producto> it = productos.iterator(); it.hasNext();){
@@ -102,25 +111,6 @@ public class Stock {
 		//si no está en el stock, lo agrega al mapa con cantidad 0
 		this.listaStock.put(producto, 0);
 		return true;
-	}*/
-	
-	//Trae y lista todos los productos de COLECCION PRODUCTO
-	//Si existen en el MAP de STOCK --> trae los datos (PRODUCTO) y la cantidad (STOCK)
-	//Si no, trae los datos (PRODUCTO) y la cantidad la pone en 0
-	/*public Map<Producto, Integer> verProductosConSinStock(){
-		for(Iterator<Producto> it = productos.iterator();it.hasNext();){
-			Producto producto = it.next();
-			if(listaStock.containsKey(producto)){
-				this.listaStock.values();
-			}
-			else{
-				this.listaStock.put(producto, 0);
-			}
-		}
-		
-		//Retorno la lista como quedó
-		return this.listaStock;
-		
 	}*/
 
 	//Getters y Setters

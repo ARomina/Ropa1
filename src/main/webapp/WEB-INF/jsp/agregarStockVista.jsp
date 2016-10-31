@@ -82,7 +82,7 @@
 										<th>CANTIDAD</th>										
 										<th class="text-center">ACCIÓN</th>
 									</tr>
-									<c:forEach items="${productos}" var="producto">
+									<c:forEach items="${productosStock}" var="producto">
 									<tr>
 										<td>${producto.key.id}</td>
 										<td>${producto.key.categoria}</td>
@@ -92,7 +92,7 @@
 										<td>${producto.key.precio}</td>
 										<td>${producto.value}</td>
 										
-										<td class="text-center"><a href="/ropa1/agregarStock/?id=${producto.key.id}" class="color2">Agregar stock</a></td>																					
+										<td class="text-center"><a href="/ropa1/agregarStock?idProducto=${producto.key.id}" class="color2">Agregar stock</a></td>																					
 									</tr>
 									</c:forEach>
 								</table>							

@@ -61,41 +61,59 @@
 				
 	</header>
 	 
-	 <div id="contact-page" class="container">
+	<div id="contact-page" class="container">
     	<div class="bg">
 	    	<div class="row">  		
 	    		<div class="col-sm-12 padding-right"> 
-	    		<h1 class="title text-center">${info}</h1>   			   			
+	    		<h1 class="title text-center">${info}</h1>     			   			
 				</div>			 		
 			</div>    	
     		<div class="row">  	
-	    		<div class="col-sm-4">
+	    		<div class="col-sm-12">
 	    			<div class="contact-form">
-				    	<form:form action="/ropa1/stockResultadoBusqueda?id=${idProducto}" ModelAttribute="stock" id="main-contact-form" class="contact-form row" name="buscar" method="POST">
-				            <div class="form-group col-md-12">
-				               <input type="submit" name="stock" class="btn btn-primary" value="Buscar">
-				            </div>																										
-				        </form:form>
+	    
+	    				<form:form action="" modelAttribute="producto" id="main-contact-form" class="contact-form row" role="form" method="POST" name="verStock">	
+							<div class="col-md-12">
+								<table class="table table-bordered sortable-theme-bootstrap col-md-12" data-sortable>
+									<tr>
+										<th>CODIGO</th>
+										<th>CATEGORIA</th>
+										<th>NOMBRE</th>
+										<th>COLOR</th>
+										<th>TALLE</th>
+										<th>PRECIO</th>
+										<th>CANTIDAD</th>									
+									</tr>
+									<!--<c:forEach items="${productosStock}" var="producto">
+									<tr>
+										<td>${producto.key.id}</td>
+										<td>${producto.key.categoria}</td>
+										<td>${producto.key.nombreProducto}</td>
+										<td>${producto.key.color}</td>	
+										<td>${producto.key.talle}</td>
+										<td>${producto.key.precio}</td>
+										<td>${producto.value}</td>
+									</tr>
+									</c:forEach>-->
+									<c:forEach items="${productosStock}" var="producto">
+									<tr>
+										<td>${producto.key.id}</td>
+										<td>${producto.key.categoria}</td>
+										<td>${producto.key.nombreProducto}</td>
+										<td>${producto.key.color}</td>	
+										<td>${producto.key.talle}</td>
+										<td>${producto.key.precio}</td>
+										<td>${producto.value}</td>
+									</tr>
+									</c:forEach>
+								</table>							
+							</div>
+						</form:form>
 	    			</div>
-	    		</div>			
+	    		</div>  				
 	    	</div>  
-    	</div>	<br/>
-<!-- 					<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr> -->
-<%-- 					<c:forEach items="${productos}" var="producto"> --%>
-<!-- 					<tr> -->
-<%-- 						<td>${producto.id}</td> --%>
-<%-- 						<td>${producto.categoria}</td> --%>
-<%-- 						<td>${producto.nombreProducto}</td> --%>
-<%-- 						<td>${producto.color}</td>	 --%>
-<%-- 						<td>${producto.talle}</td>	 --%>
-<%-- 						<td>${producto.precio}</td> --%>
-<%-- 						<td>${producto.cantidad}</td> --%>
-																
-<!-- 					</tr> -->
-<%-- 				</c:forEach> --%>
-<!-- 				</tbody> -->
-			</table>
-		</div>
+    	</div>
+		
 		<br/><br/>
     	<div class="bg">   	
     		<div class="row">  	
@@ -109,16 +127,14 @@
 								<input type="text" name="cantidad" class="form-control" required="required" placeholder="Ingrese Cantidad">
 							</div>
 				            <div class="form-group col-md-4">
-				                <input type="submit" name="suma" class="btn btn-primary" value="Agregar">
-				                <input type="submit" name="suma" class="btn btn-primary" value="Revertir acción">
+				              
 				            </div>																										
 				        </form>
 	    			</div>
 	    		</div>			
 	    	</div>  
     	</div>	
-    </div>
-	
+</div>	
 	<%@include file="footer.jsp" %>
   
     <script src="js/jquery.js"></script>

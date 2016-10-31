@@ -45,6 +45,12 @@ public class StockServicioImpl implements StockServicio{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	@Override
+	public Integer verStockProducto() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	/*
 	@Override

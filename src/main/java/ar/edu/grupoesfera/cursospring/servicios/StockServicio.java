@@ -12,5 +12,6 @@ public interface StockServicio {
 	Boolean agregarProductoAStockSiNoEsta();
 	Boolean agregarStock();
 	Set<Producto> verProductosDisponibles();
+	Integer verStockProducto();
 	Map<Producto, Integer> verTodoStock();
 }
